@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+    @layer base{
+        @font-face {
+            font-family: "GillSans";
+            src: url("./fonts/Gill\ Sans.otf") format("otf");
+            font-family: "GillSansBoldItalic";
+            src: url("./fonts/Gill\ Sans\ Bold.otf") format("otf");
+            font-family: "GillSansBold";
+            src: url("./fonts/Gill\ Sans\ Bold\ Italic.otf") format("otf");
+            font-family: "GillSansHeavyItalic";
+            src: url("./fonts/Gill\ Sans\ Heavy\ Italic.otf") format("otf");
+            font-family: "GillSansHeavy";
+            src: url("./fonts/Gill\ Sans\ Heavy.otf") format("otf");
+            font-style: normal;
+            font-weight: 800;
+            font-display: swap;
+
+            font-family: "GillSansItalic";
+            src: url("./fonts/Gill\ Sans\ Italic.otf") format("otf");
+            font-family: "GillSansLightItalic";
+            src: url("./fonts/Gill\ Sans\ Light\ Italic.otf") format("otf");
+            font-family: "GillSansLight";
+            src: url("./fonts/Gill\ Sans\ Light.otf") format("otf");
+            font-family: "GillSansMItalic";
+            src: url("./fonts/Gill\ Sans\ Medium\ Italic.otf") format("otf");
+            font-family: "GillSansMedium";
+            src: url("./fonts/Gill\ Sans\ Medium.otf") format("otf");
+            font-family: "GillSansCondensed";
+            src: url("./fonts/GillSans\ Condensed.otf") format("otf");
+            font-family: "GillSansCondensedBold";
+            src: url("./fonts/GillSans-SemiBold.ttf") format("ttf");
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+
+        }
+    }
+
+
+@keyframes slide {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-100%);}  
+}
+.animate-slide-infinite{
+    animation: slide 15s linear infinite;
+}
