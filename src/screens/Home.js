@@ -380,7 +380,7 @@ function Home() {
                       </div>             
                                   </div>
 
-                                  <div  className='laptop:flex justify-center items-center bg-cover mobile:h-72 w-full bg-blue-200  tablet:h-32 ' >
+                                  <div  className='laptop:flex justify-center items-center bg-cover mobile:h-48 w-full bg-blue-200  tablet:h-32 ' >
                         <h1 className='text-black border-solid font-semibold laptop:place-items-center mobile:place-items-start mobile:text-sm '>@Nova Igreja Batista 2024.</h1>  
                         <h3 >Todos os direitos reservados.</h3>
 
