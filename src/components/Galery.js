@@ -1,36 +1,39 @@
-import React, { useState } from "react";
-import { CloudinaryContext, Image } from "cloudinary-react";
+import { CloudinaryContext, Image } from 'cloudinary-react'
+import React, { useState } from 'react'
 
 const Gallery = () => {
-  const [fullscreenImage, setFullscreenImage] = useState(null); // Para controlar o fullscreen
+  const [fullscreenImage, setFullscreenImage] = useState(null) // Para controlar o fullscreen
 
   const images = [
     // Lista de public IDs das imagens armazenadas no Cloudinary
-    "sample",
-    "sample2",
-    "teste/o8njput1iukkf0hing2j",
-    "teste/ngvja6erjp9x3zik04il",
-    "teste/gbqhq15koxrmqcfoem6n",
+    'sample',
+    'sample2',
+    'teste/o8njput1iukkf0hing2j',
+    'teste/ngvja6erjp9x3zik04il',
+    'teste/gbqhq15koxrmqcfoem6n'
     // Adicione mais imagens conforme necessário
-  ];
+  ]
 
   const handleFullscreen = (image) => {
-    setFullscreenImage(image);
-  };
+    setFullscreenImage(image)
+  }
 
   const handleDownload = (image) => {
-    const url = `https://res.cloudinary.com/dstywrq5n/image/upload/${image}.jpg`; // URL da imagem original
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = image;
-    link.click();
-  };
+    const url = `https://res.cloudinary.com/dstywrq5n/image/upload/${image}.jpg` // URL da imagem original
+    const link = document.createElement('a')
+    link.href = url
+    link.download = image
+    link.click()
+  }
 
   return (
     <CloudinaryContext cloudName="dstywrq5n">
       <div className="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {images.map((image, index) => (
-          <div key={index} className="relative overflow-hidden rounded-lg shadow-md">
+          <div
+            key={index}
+            className="relative overflow-hidden rounded-lg shadow-md"
+          >
             {/* Imagem com zoom ao passar o mouse */}
             <Image
               publicId={image}
@@ -74,7 +77,7 @@ const Gallery = () => {
         </div>
       )}
     </CloudinaryContext>
-  );
-};
+  )
+}
 
-export default Gallery;
+export default Gallery

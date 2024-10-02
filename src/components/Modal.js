@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
 const Modal = ({ videoUrl, onClose }) => {
-  if (!videoUrl) return null;
+  if (!videoUrl) return null
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
@@ -12,9 +12,8 @@ const Modal = ({ videoUrl, onClose }) => {
             height="500"
             src={videoUrl}
             title="0"
-            autoplay="0"
+            autoPlay="0"
             frameBorder="0"
-            
             allowFullScreen
           ></iframe>
           <button
@@ -26,7 +25,7 @@ const Modal = ({ videoUrl, onClose }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Modal;
+export default Modal

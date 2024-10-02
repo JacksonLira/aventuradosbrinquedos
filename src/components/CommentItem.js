@@ -1,5 +1,6 @@
-import React from 'react';
-import RatingButton from './RatingButton';
+import React from 'react'
+
+import RatingButton from './RatingButton'
 
 const CommentItem = ({ comment, updateRating }) => {
   return (
@@ -20,7 +21,7 @@ const CommentItem = ({ comment, updateRating }) => {
         />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CommentItem;
+export default CommentItem

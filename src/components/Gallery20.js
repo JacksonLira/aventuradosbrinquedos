@@ -1,63 +1,75 @@
-import React, { useState } from 'react';
-import Imgbg from '../assets/toy-story-cloud.jpg';
-import Logo from '../assets/_MarcaMutante NibGC ToyStory.png';
-import { CloudinaryContext, Image } from 'cloudinary-react';
-import { Link } from 'react-router-dom';
+import { CloudinaryContext, Image } from 'cloudinary-react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+
+import Logo from '../assets/_MarcaMutante NibGC ToyStory.png'
+import Imgbg from '../assets/toy-story-cloud.jpg'
 
 const ImageGallery = () => {
-  const [fullscreenImage, setFullscreenImage] = useState(null); // Para controlar o fullscreen
+  const [fullscreenImage, setFullscreenImage] = useState(null) // Para controlar o fullscreen
 
   const images = [
     // Lista de public IDs das imagens armazenadas no Cloudinary
-    "sample",
-    "sample2",
-    "teste/o8njput1iukkf0hing2j",
-    "teste/ngvja6erjp9x3zik04il",
-    "teste/gbqhq15koxrmqcfoem6n",
-    "teste/utkrmtegijgyjqdccxot",
-    "teste/nm2hjilqctq0mn9yjgto",
-    "",
-    "",
+    'sample',
+    'sample2',
+    'teste/o8njput1iukkf0hing2j',
+    'teste/ngvja6erjp9x3zik04il',
+    'teste/gbqhq15koxrmqcfoem6n',
+    'teste/utkrmtegijgyjqdccxot',
+    'teste/nm2hjilqctq0mn9yjgto',
+    '',
+    ''
     // Adicione mais imagens conforme necessário
-  ];
+  ]
 
   const handleFullscreen = (image) => {
-    setFullscreenImage(image);
-  };
+    setFullscreenImage(image)
+  }
 
   const handleDownload = async (image) => {
-    const url = `https://res.cloudinary.com/dstywrq5n/image/upload/${image}.jpg`; // URL da imagem original
-    
+    const url = `https://res.cloudinary.com/dstywrq5n/image/upload/${image}.jpg` // URL da imagem original
+
     try {
-      const response = await fetch(url);
-      const blob = await response.blob();
-      const downloadUrl = window.URL.createObjectURL(blob);
-      const link = document.createElement("a");
-      link.href = downloadUrl;
-      link.download = `${image}.jpg`; // Nome do arquivo para download
-      document.body.appendChild(link);
-      link.click();
-      link.remove();
-      window.URL.revokeObjectURL(downloadUrl);
+      const response = await fetch(url)
+      const blob = await response.blob()
+      const downloadUrl = window.URL.createObjectURL(blob)
+      const link = document.createElement('a')
+      link.href = downloadUrl
+      link.download = `${image}.jpg` // Nome do arquivo para download
+      document.body.appendChild(link)
+      link.click()
+      link.remove()
+      window.URL.revokeObjectURL(downloadUrl)
     } catch (error) {
-      console.error('Erro ao fazer download da imagem:', error);
+      console.error('Erro ao fazer download da imagem:', error)
     }
-  };
+  }
 
   return (
-    <div className="relative inset-0 bg-cover h-screen w-full bg-fixed overflow-y-scroll " style={{ backgroundImage: `url(${Imgbg})` }}>
-      <h1 className='text-yellow-300  font-semibold text-3xl drop-shadow-[0_10px_10px_rgba(0,0,0,10)]'>Galeria de Imagens 20</h1>
-      <div className='flex items-end bg-red-500 laptop:ml-[3px] laptop:mt-[5px] skew-x-12 laptop:p-4 laptop:w-20 laptop: mobile:w-[150px] mobile:ml-5 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]'>
-                              <Link to="/"  className="text-white font-black hover:text-blue-700 transition duration-300"
-                                ><h2 className=' -skew-x-12'>Home</h2>                              
-                                </Link>
-                             </div>
+    <div
+      className="relative inset-0 bg-cover h-screen w-full bg-fixed overflow-y-scroll "
+      style={{ backgroundImage: `url(${Imgbg})` }}
+    >
+      <h1 className="text-yellow-300  font-semibold text-3xl drop-shadow-[0_10px_10px_rgba(0,0,0,10)]">
+        Galeria de Imagens 20
+      </h1>
+      <div className="flex items-end bg-red-500 laptop:ml-[3px] laptop:mt-[5px] skew-x-12 laptop:p-4 laptop:w-20 laptop: mobile:w-[150px] mobile:ml-5 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]">
+        <Link
+          to="/"
+          className="text-white font-black hover:text-blue-700 transition duration-300"
+        >
+          <h2 className=" -skew-x-12">Home</h2>
+        </Link>
+      </div>
       <div>
-        <img className=' w-32' src={Logo} alt="" />
+        <img className=" w-32" src={Logo} alt="" />
         <CloudinaryContext cloudName="dstywrq5n">
           <div className="p-10 grid  mobile:grid-cols-2 tablet:grid-cols-3 laptop:grid-cols-4 gap-4">
             {images.map((image, index) => (
-              <div key={index} className="relative overflow-hidden rounded-lg shadow-md">
+              <div
+                key={index}
+                className="relative overflow-hidden rounded-lg shadow-md"
+              >
                 {/* Imagem com zoom ao passar o mouse */}
                 <Image
                   publicId={image}
@@ -104,7 +116,7 @@ const ImageGallery = () => {
         </CloudinaryContext>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ImageGallery;
+export default ImageGallery
