@@ -1,5 +1,6 @@
 import React from 'react'
 
+// eslint-disable-next-line react/prop-types
 const RatingButton = ({ type, count, onClick }) => {
   // Define o ícone e o rótulo com base no tipo de botão (curtir ou descurtir)
   const isLike = type === 'like'

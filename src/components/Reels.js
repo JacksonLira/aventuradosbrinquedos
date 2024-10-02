@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { FaShareAlt, FaExpand } from 'react-icons/fa'
 import YouTube from 'react-youtube'
 
@@ -22,6 +22,7 @@ const VideoPanel = () => {
   // Extrair o ID do vídeo do URL do YouTube
   const extractVideoId = (url) => {
     const regex =
+      // eslint-disable-next-line no-useless-escape
       /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/
     const match = url.match(regex)
     return match ? match[1] : null
