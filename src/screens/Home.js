@@ -32,15 +32,11 @@ import PhotoGallery from '../components/Galery'
 import Modal from '../components/Modal'
 import Reels from '../components/Reels'
 
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
-import { FacebookIcon, InstapaperIcon } from 'react-share'
-import {
-  FaFacebook,
-  FaInstagram,
-  FaVimeo,
-  FaWhatsapp,
-  FaYoutube
-} from 'react-icons/fa'
+// eslint-disable-next-line import-helpers/order-imports
+import { Link } from 'react-router-dom'
+// import { FacebookIcon, InstapaperIcon } from 'react-share'
+// eslint-disable-next-line import-helpers/order-imports
+import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube } from 'react-icons/fa'
 
 function Home() {
   const openImagePanel = (e) => {
