@@ -11,7 +11,7 @@ import GalleryPagetree from '../screens/GaleryP23'
 import GalleryPagefour from '../screens/GaleryP24'
 import GalleryPagefive from '../screens/GaleryP25'
 import GalleryPagesix from '../screens/GaleryP26'
-import GalleryPage from '../screens/GaleryPage'
+import GalleryPage from '../screens/GaleryP27'
 
 function App() {
   return (

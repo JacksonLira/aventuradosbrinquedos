@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react'
 import { FaShareAlt, FaExpand } from 'react-icons/fa'
 import YouTube from 'react-youtube'
@@ -6,8 +7,6 @@ const VideoPanel = () => {
   // Lista de URLs dos vídeos do YouTube
   const [videos, setVideos] = useState([
     'https://www.youtube.com/embed/00MWmbMknbw?autoplay=1&controls=0&loop=1&mute=1&rel=0&modestbranding=1&playsinline=1',
-    'https://www.youtube.com/watch?v=ScMzIvxBSi4',
-    'https://www.youtube.com/watch?v=aqz-KE-bpKQ',
     'https://youtu.be/gz7VWvylzWE?list=PLucwtx8SlRymhzjmR9ilIEVcWC_tq2Upb',
     'https://youtu.be/juWT7f1-ehQ?list=PLucwtx8SlRymhzjmR9ilIEVcWC_tq2Upb',
     'https://youtu.be/hEkGQqUzIfQ?list=PLucwtx8SlRymhzjmR9ilIEVcWC_tq2Upb',

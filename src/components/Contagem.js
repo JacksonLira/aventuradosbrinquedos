@@ -34,17 +34,17 @@ const CountdownTimer = () => {
   }, [])
 
   return (
-    <div className="bg-red-800 -skew-x-48">
-      <h1>Contagem Regressiva</h1>
+    <div className=" -skew-x-12 font-GillCondensedB">
+      <h1 className="text-[#ffda00]">Contagem Regressiva</h1>
       {timeLeft.days !== undefined ? (
-        <div className="grid grid-flow-col  -skew-x-12 gap-x-2 items-end laptop:text-2xl text-white rounded-xl">
+        <div className="grid  grid-flow-col border border-full   gap-x-2 items-end laptop:text-3xl text-white rounded-xl font-GillCondensedB">
           <h2>{timeLeft.days} Dias</h2>
           <h2>{timeLeft.hours} Horas</h2>
           <h2>{timeLeft.minutes} Minutos</h2>
           <h2>{timeLeft.seconds} </h2>
         </div>
       ) : (
-        <h2>Evento já passou!</h2>
+        <h2>Evento já começou!</h2>
       )}
     </div>
   )

@@ -50,10 +50,10 @@ const ImageGallery = () => {
       className="relative inset-0 bg-cover h-screen w-full bg-fixed overflow-y-scroll "
       style={{ backgroundImage: `url(${Imgbg})` }}
     >
-      <h1 className="text-yellow-300  font-semibold text-3xl drop-shadow-[0_10px_10px_rgba(0,0,0,10)]">
-        Galeria de Imagens 20
+      <h1 className="text-yellow-300 font-GillCondensedB font-semibold text-3xl drop-shadow-[0_10px_10px_rgba(0,0,0,10)]">
+        Galeria de Imagens: 20/10/2024
       </h1>
-      <div className="flex items-end bg-red-500 laptop:ml-[3px] laptop:mt-[5px] skew-x-12 laptop:p-4 laptop:w-20 laptop: mobile:w-[150px] mobile:ml-5 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]">
+      <div className=" items-end bg-red-500 laptop:ml-[15px] skew-x-12 laptop:p-4 laptop:w-20 laptop: mobile:w-[150px] mobile:ml-5 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]">
         <Link
           to="/"
           className="text-white font-black hover:text-blue-700 transition duration-300"
@@ -62,7 +62,11 @@ const ImageGallery = () => {
         </Link>
       </div>
       <div>
-        <img className=" w-32" src={Logo} alt="" />
+        <img
+          className="absolute bg-fixed opacity-60 top-48 right-56 w-[700px]"
+          src={Logo}
+          alt=""
+        />
         <CloudinaryContext cloudName="dstywrq5n">
           <div className="p-10 grid  mobile:grid-cols-2 tablet:grid-cols-3 laptop:grid-cols-4 gap-4">
             {images.map((image, index) => (

@@ -13,7 +13,7 @@ const Modal = ({ videoUrl, onClose }) => {
             height="500"
             src={videoUrl}
             title="0"
-            autoPlay="0"
+            autoPlay="1"
             frameBorder="0"
             allowFullScreen
           ></iframe>
