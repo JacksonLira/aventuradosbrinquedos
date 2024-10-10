@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
-const plugin = require('tailwindcss/plugin')
+// eslint-disable-next-line no-unused-vars
+const plugins = require('tailwindcss/plugin')
 
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
@@ -38,15 +39,29 @@ module.exports = {
     }
   },
   plugins: [
-    plugin(function ({ matchUtilities, theme }) {
-      matchUtilities(
-        {
-          'text-shadow': value => ({
-            textShadow: value
-          })
+    function ({ addUtilities }) {
+      // Definindo novas classes utilitárias
+      const newUtilities = {
+        '.text-outline-black': {
+          textShadow:
+            '1px 1px 0 black, -1px -1px 0 black, -1px 1px 0 black, 1px -1px 0 black'
         },
-        { values: theme('textShadow') }
-      )
-    })
+        '.text-outline-white': {
+          textShadow:
+            '1px 1px 0 white, -1px -1px 0 white, -1px 1px 0 white, 1px -1px 0 white'
+        },
+        '.text-outline-blue': {
+          textShadow:
+            '2px 2px 0 #014d98, -2px -2px 0 #014d98, -2px 2px 0 #014d98, 2px -2px 0 #014d98'
+        },
+        '.text-shadow-md': {
+          textShadow: '3px 3px 6px rgba(0, 0, 0, 0.5)'
+        },
+        '.text-shadow-lg': {
+          textShadow: '5px 5px 10px rgba(0, 0, 0, 0.5)'
+        }
+      }
+      addUtilities(newUtilities, ['responsive', 'hover'])
+    }
   ]
 }
