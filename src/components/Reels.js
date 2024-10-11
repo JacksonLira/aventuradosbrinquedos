@@ -19,7 +19,7 @@ const VideoPanel = () => {
   const [fullscreenVideoId, setFullscreenVideoId] = useState(null)
 
   // Extrair o ID do vídeo do URL do YouTube
-  const extractVideoId = (url) => {
+  const extractVideoId = url => {
     const regex =
       // eslint-disable-next-line no-useless-escape
       /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/
@@ -36,13 +36,13 @@ const VideoPanel = () => {
     }
   }
 
-  const handleShare = (url) => {
+  const handleShare = url => {
     // Copia o URL do vídeo para a área de transferência
     navigator.clipboard.writeText(url)
     alert('Link do vídeo copiado para a área de transferência!')
   }
 
-  const handleFullscreen = (videoId) => {
+  const handleFullscreen = videoId => {
     setFullscreenVideoId(videoId)
   }
 
@@ -61,7 +61,7 @@ const VideoPanel = () => {
                 videoId={videoId}
                 opts={opts}
                 className="rounded-md shadow-lg overflow-hidden"
-                onReady={(e) => e.target.pauseVideo()}
+                onReady={e => e.target.pauseVideo()}
               />
             )}
 

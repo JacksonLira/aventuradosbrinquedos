@@ -1,6 +1,7 @@
 {
   "name": "lpaventuranib2024",
   "version": "0.1.0",
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -36,7 +37,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "yarn run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",

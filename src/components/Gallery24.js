@@ -22,11 +22,11 @@ const ImageGallery = () => {
     // Adicione mais imagens conforme necessário
   ]
 
-  const handleFullscreen = (image) => {
+  const handleFullscreen = image => {
     setFullscreenImage(image)
   }
 
-  const handleDownload = async (image) => {
+  const handleDownload = async image => {
     const url = `https://res.cloudinary.com/dstywrq5n/image/upload/${image}.jpg` // URL da imagem original
 
     try {
