@@ -60,7 +60,8 @@ function Home() {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1
+          slidesToScroll: 3,
+          arrows: true
         }
       },
       {
@@ -71,10 +72,11 @@ function Home() {
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 300,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1
+          slidesToScroll: 4,
+          arrows: true
         }
       }
     ]
@@ -509,7 +511,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="laptop:flex  justify-center items-center laptop:h-24 mobile:h-[150px] w-full bg-[#014d98]  tablet:h-32 ">
+      <div className="laptop:flex mobile:flex laptop:justify-center laptop:items-center laptop:h-24 mobile:h-12 w-full bg-[#014d98]  tablet:h-24 ">
         <h1 className="text-black border-solid font-semibold laptop:text-md laptop:place-items-center mobile:place-items-center mobile:text-sm ">
           @Nova Igreja Batista 2024.
         </h1>
