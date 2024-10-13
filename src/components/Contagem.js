@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 const CountdownTimer = () => {
   // Definir a data e hora final (no formato "AAAA-MM-DDTHH:MM:SS")
-  const targetDate = new Date('2024-12-31T23:59:59')
+  const targetDate = new Date('2024-10-19T19:29:59')
 
   const calculateTimeLeft = () => {
     const now = new Date()
