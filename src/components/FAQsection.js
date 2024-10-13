@@ -6,7 +6,7 @@ const FAQSection = () => {
   const faqs = [
     {
       question: 'A entrada é gratuita ?',
-      answer: 'Sim, nossa pessa é gratuita e para todas as idades.'
+      answer: 'Sim, nossa peça é gratuita e para todas as idades.'
     },
     {
       question: 'Há vaga para estacionamento?',
