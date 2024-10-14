@@ -86,7 +86,7 @@ function Home() {
     <div className="App">
       <div className="absolute bg-cover rounded-lg h-23 w-full bg-transparent"></div>
       <div
-        className="relative flex justify-center items-center bg-cover laptop:h-screen tablet:h-screen mobile:h-[600px] w-full overflow-hidden"
+        className="relative flex justify-center items-center bg-cover laptop:h-screen tablet:h-[700px] mobile:h-[700px] w-full overflow-hidden"
         style={{ backgroundImage: `url(${Bgimg})` }}
       >
         <div className="absolute bg-cover mobile:font-bold  mobile:text-sm tablet:font-bold laptop:font-bold laptop:left-[450px] top-0 font-GillCondensedB drop-shadow-[0_10px_10px_rgba(0,0,0,55)] ">
@@ -282,15 +282,15 @@ function Home() {
         className="flex bg-cover  h-screen mobile:h-[590px] w-full"
         style={{ backgroundImage: `url(${Bgimg})` }}
       >
-        <h1 className="absolute mt-10 laptop:left-[500px] mobile:left-[200px]  text-[#ffda00] font-GillCondensedB mobile:text-lg laptop:text-5xl text-outline-blue">
+        <h1 className="absolute mt-10 laptop:left-[500px] mobile:left-[200px] tablet:left-[300px]  text-[#ffda00] font-GillCondensedB mobile:text-3xl laptop:text-5xl text-outline-blue">
           Duvidas?
         </h1>
-        <div className="absolute p-10 mobile:mt-20 laptop:mt-32 laptop:h-72 mobile:h-96 mobile:overflow-y-auto tablet:mt-20 mobile:ml-[7px] tablet:ml-24 laptop:ml-1  overflow-y-scroll">
+        <div className="absolute p-10 mobile:mt-20 laptop:mt-32 laptop:h-72 mobile:h-96 mobile:overflow-y-auto tablet:mt-20 mobile:ml-[7px]  tablet:mr-10  laptop:ml-1  overflow-y-scroll">
           <FAQSection />
         </div>
 
         <a
-          className="flex h-24 mt-[450px] mobile:mt-[450px] mb-10 laptop:ml-[450px] mobile:ml-20 grid-flow-col gap-x-2 items-end laptop:text-5xl mobile:text-sm text-white drop-shadow-[0_10px_10px_rgba(0,0,0,10)] overflow-hidden"
+          className="flex h-24 mt-[450px] mobile:mt-[450px] mb-10 laptop:ml-[450px] tablet:ml-48 mobile:ml-20 grid-flow-col gap-x-2 items-end laptop:text-5xl mobile:text-sm text-white drop-shadow-[0_10px_10px_rgba(0,0,0,10)] overflow-hidden"
           href="https://web.whatsapp.com/"
         >
           <FaWhatsapp size={72} color="#e30024" />
@@ -301,17 +301,17 @@ function Home() {
       </div>
 
       <div className="relative bg-cover mt-[-20px] bg-[#ffda00] h-screen w-full border-t border-blue-900 border-t-4 rounded-t-[20px] border-b border-blue-900 border-b-4 rounded-b-[20px]">
-        <div className="grid ml-96 mobile:mt-2 tablet:ml-32 mobile:ml-20 laptop:ml-96 laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[265px] laptop:w-[500px] ">
-          <h1 className="-skew-x-12 text-white mobile:text-sm mobile:text-left laptop:text-4xl  laptop:text-3xl   font-GillCondensedB">
+        <div className="grid ml-96 mobile:mt-2 tablet:ml-32 mobile:ml-20 laptop:ml-96 laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[265px] tablet:w-[440px] laptop:w-[500px] ">
+          <h1 className="-skew-x-12 text-white mobile:text-sm mobile:text-left laptop:text-4xl  tablet:text-3xl   font-GillCondensedB">
             Compartilhe nossos videos{' '}
           </h1>
           <img
-            className="absolute -skew-x-12 mobile:ml-[220px] mobile:w-[80px] mobile:mt-[-28px] laptop:w-32 laptop:ml-[425px] laptop:mt-[-49px]"
+            className="absolute -skew-x-12 mobile:ml-[220px] mobile:w-[80px] tablet:w-[100px] mobile:mt-[-28px]  tablet:ml-[370px] tablet:w-[80px] tablet:mt-[-28px]  laptop:w-32 laptop:ml-[425px] laptop:mt-[-49px]"
             src={Buzzy}
             alt=""
           />
         </div>
-        <div className="laptop:h-[410px] mobile:h-[670px] mobile:p-4 mobile:mt-10 tablet:h-[300px] tablet:p-10 tablet:mt-10 overflow-hidden overflow-y-auto">
+        <div className="laptop:h-[410px] mobile:h-[670px]  mobile:p-4 mobile:mt-10 tablet:h-[400px] tablet:p-2 tablet:mt-5 overflow-hidden overflow-y-auto">
           <Reels />
         </div>
       </div>
@@ -322,9 +322,9 @@ function Home() {
         <h1 className="text-[#ffda00] font-GillCondensedB laptop:text-5xl mobile:py-10 mobile:text-lg laptop:py-10 tablet:text-xl text-outline-blue">
           Como Chegar ?
         </h1>
-        <div className="flex justify-center items-center laptop:mt-1 mobile:mt-5 tablet:mt-5">
+        <div className="flex justify-center items-center laptop:mt-1 mobile:mt-5 tablet:mt-[-25px]">
           <iframe
-            className="laptop:w-[1100px] laptop:h-[400px] mobile:h-[200px] mobile:w-[380px] tablet:w-[600px] tablet:h-[150px] laptop:drop-shadow-[0_10px_10px_rgba(0,0,0,10)] mobile:overflow-hidden"
+            className="laptop:w-[1100px] laptop:h-[400px] mobile:h-[200px] mobile:w-[380px] tablet:w-[600px] tablet:h-[180px] laptop:drop-shadow-[0_10px_10px_rgba(0,0,0,10)] mobile:overflow-hidden"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.1681625904985!2d-59.94737492502912!3d-3.049598196926207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c1b8d7b61c27d%3A0x1d8b8b78d3186636!2sNova%20Igreja%20Batista%20Grande%20Circular!5e0!3m2!1spt-BR!2sbr!4v1725812051612!5m2!1spt-BR!2sbr"
             allowfullscreen=""
             loading="lazy"
@@ -338,10 +338,10 @@ function Home() {
         style={{ backgroundImage: `url(${Bgimg})` }}
       >
         <img className="absolute  laptop:w-32 mobile:w-24" src={title} alt="" />
-        <h1 className="absolute mobile:ml-32 mobile:mt-5 text-[#ffda00] font-GillCondensedB laptop:text-5xl laptop:ml-[370px] mobile:text-lg tablet:text-xl text-outline-blue">
+        <h1 className="absolute mobile:ml-32 mobile:mt-5 text-[#ffda00] font-GillCondensedB laptop:text-5xl laptop:ml-[370px] tablet:ml-[220px] mobile:text-lg tablet:text-3xl text-outline-blue">
           Baixe suas fotos aqui!
         </h1>
-        <div className="grid laptop:mt-24 laptop:ml-10 laptop:space-x-3 laptop:p-8 mobile:space-y-2 mobile:mt-20  mobile:grid-cols-2 mobile:p-2 laptop:grid-cols-3 laptop:grid-rows-4 justify-center items-center mobile:overflow-hidden ">
+        <div className="grid laptop:mt-24 laptop:ml-10 tablet:ml-20 laptop:space-x-3 laptop:p-8 mobile:space-y-2 tablet:space-y-2 mobile:mt-20  mobile:grid-cols-2 mobile:p-2 laptop:grid-cols-3 laptop:grid-rows-4 justify-center items-center mobile:overflow-hidden ">
           <div className="relative bg-[#e30024] laptop:ml-[3px] laptop:mt-[5px] skew-x-12 laptop:p-4 laptop:w-80 mobile:w-[150px] mobile:ml-5 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]">
             <h1 className="absolute laptop:mt-[-40px] skew-y-6 -skew-x-12 laptop:text-7xl mobile:text-3xl mobile:mt-[-15px] text-[#ffda00] font-black hover:mt-[-50px]">
               19
@@ -430,7 +430,7 @@ function Home() {
               <h2 className=" -skew-x-12 font-GillCondensedB">OUTUBRO</h2>
             </Link>
           </div>
-          <div className="relative bg-[#e30024] skew-x-12 laptop:p-4 laptop:w-80 mobile:w-48 mobile:ml-20 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]">
+          <div className="relative bg-[#e30024] skew-x-12 laptop:p-4 laptop:w-80 mobile:w-48 mobile:ml-20 tablet:left-10 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]">
             <h1 className="absolute laptop:mt-[-40px] skew-y-6 -skew-x-12 laptop:text-7xl mobile:text-4xl mobile:mt-[-15px] text-[#ffda00] font-black hover:mt-[-50px]">
               27
             </h1>
@@ -505,7 +505,7 @@ function Home() {
           </a>
 
           <img
-            className="absolute laptop:left-96 laptop:top-32 laptop:w-[590px] mobile:w-[400px] mobile:top-32 mobile:left-1 tablet:w-[400px] tablet:top-40 tablet:right-5 drop-shadow-[0_20px_20px_rgba(0,0,40,0.95)]"
+            className="absolute laptop:left-96 laptop:top-32 laptop:w-[590px] mobile:w-[400px] mobile:top-32 mobile:left-1 tablet:w-[360px] tablet:top-24 tablet:left-[330px] drop-shadow-[0_20px_20px_rgba(0,0,40,0.95)]"
             src={Imgfinal}
             alt=""
           />
@@ -513,7 +513,7 @@ function Home() {
       </div>
 
       <div className="laptop:flex mobile:flex laptop:justify-center laptop:items-center laptop:h-24 mobile:h-12 w-full bg-[#014d98]  tablet:h-24 ">
-        <h1 className="text-black border-solid font-semibold laptop:text-md laptop:place-items-center mobile:place-items-center mobile:text-sm ">
+        <h1 className="text-black border-solid font-semibold laptop:text-md laptop:place-items-center mobile:place-items-center tablet:ml-48 tablet-mt-10 mobile:text-sm ">
           @Nova Igreja Batista 2024.
         </h1>
         <h3 className="text-sm">Todos os direitos reservados.</h3>
