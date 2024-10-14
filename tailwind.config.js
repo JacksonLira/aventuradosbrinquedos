@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /** @type {import('tailwindcss').Config} */
 
 // eslint-disable-next-line no-unused-vars
@@ -24,17 +25,19 @@ module.exports = {
         lg: '0 8px 16px var(--tw-shadow-color)'
       },
       fontFamily: {
-        GillBold: ['GillSansBoldItalic', 'sans-serif'],
-        GillBoldItalic: ['GillSansBold', 'sans-serif'],
-        GillHeavyItalic: ['GillSansHeavyItalic', 'sans-serif'],
-        GillHeavy: ['GillSansHeavy', 'sans-serif'],
-        GillItalic: ['GillSansItalic', 'sans-serif'],
-        GillLightIta: ['GillSansLightItalic', 'sans-serif'],
-        GillLight: ['GillSansLight', 'sans-serif'],
-        GillMItalic: ['GillSansMItalic', 'sans-serif'],
-        GillMedium: ['GillSansMedium', 'sans-serif'],
-        GillCondensed: ['GillSansCondensed', 'sans-serif'],
-        GillCondensedB: ['GillSansCondensedBold', 'sans-serif']
+        // eslint-disable-next-line prettier/prettier
+        'GillBold': ['GillSansBoldItalic', 'sans-serif'],
+        'GillBoldItalic': ['GillSansBold', 'sans-serif'],
+        // eslint-disable-next-line prettier/prettier
+        'GillHeavyItalic': ['GillSansHeavyItalic', 'sans-serif'],
+        'GillHeavy': ['GillSansHeavy', 'sans-serif'],
+        'GillItalic': ['GillSansItalic', 'sans-serif'],
+        'GillLightIta': ['GillSansLightItalic', 'sans-serif'],
+        'GillLight': ['GillSansLight', 'sans-serif'],
+        'GillMItalic': ['GillSansMItalic', 'sans-serif'],
+        'GillMedium': ['GillSansMedium', 'sans-serif'],
+        'GillCondensed': ['GillSansCondensed', 'sans-serif'],
+        'GillCondensedB': ['GillSansCondensedBold', 'sans-serif']
       }
     }
   },

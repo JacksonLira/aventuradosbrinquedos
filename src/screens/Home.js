@@ -84,17 +84,18 @@ function Home() {
 
   return (
     <div className="App">
-      <div className="absolute bg-cover rounded-lg h-23 w-full sm:h-full bg-transparent">
-        <h1 className=" text-[#ffda00] font-GillCondensedB text-3xl text-outline-blue">
-          19 A 27 DE OUTUBRO
-        </h1>
-      </div>
+      <div className="absolute bg-cover rounded-lg h-23 w-full bg-transparent"></div>
       <div
-        className="flex justify-center items-center bg-cover h-screen"
+        className="relative flex justify-center items-center bg-cover laptop:h-screen tablet:h-screen mobile:h-[600px] w-full overflow-hidden"
         style={{ backgroundImage: `url(${Bgimg})` }}
       >
+        <div className="absolute bg-cover mobile:font-bold  mobile:text-sm tablet:font-bold laptop:font-bold laptop:left-[450px] top-0 font-GillCondensedB drop-shadow-[0_10px_10px_rgba(0,0,0,55)] ">
+          <h1 className=" text-[#ffda00] font-GillCondensedB laptop:text-3xl tablet:text-lg mobile:text-md text-outline-blue">
+            19 A 27 DE OUTUBRO
+          </h1>
+        </div>
         <img
-          className="absolute mobile:w-24 mobile:top-5 tablet:w-24 tablet:top-5 laptop:w-48 laptop:left-0 laptop:top-0 drop-shadow-[0_20px_20px_rgba(0,0,0,0.55)]"
+          className="absolute mobile:w-24 mobile:top-5 tablet:w-24  tablet:top-5 laptop:w-48 laptop:left-0 laptop:top-0 drop-shadow-[0_20px_20px_rgba(0,0,0,0.55)]"
           src={logo}
           alt=""
         />
@@ -102,16 +103,16 @@ function Home() {
           APRESENTA:
         </h1>
         <img
-          className="absolute 
+          className="absolute
                     mobile:w-[600px] mobile:top-32
-                    tablet:w-[500px] tablet:top-24
+                    tablet:w-[500px] tablet: tablet:top-24
                     laptop:w-[600px] laptop: laptop:top-20
                     drop-shadow-[0_20px_20px_rgba(0,0,0,0.85)]"
           src={perso}
           alt=""
         />
         <img
-          className="absolute drop-shadow-[0_20px_20px_rgba(0,0,0,0.95)]
+          className="absolute z-40 drop-shadow-[0_20px_20px_rgba(0,0,0,0.95)]
                     mobile:w-[300px] mobile:top-[330px]
                     tablet:w-[350px] tablet:top-[280px]
                     laptop:w-[400px] laptop:top-[310px]"
@@ -123,12 +124,12 @@ function Home() {
                     mobile:w-[70px] mobile:ml-[280px] mobile:top-[460px]
                     tablet:w-[90px] tablet:ml-[420px] tablet:top-[350px]
                     laptop:w-[90px] laptop:ml-[450px] laptop:top-[450px]
-                    drop-shadow-[0_20px_20px_rgba(0,0,0,0.85)]"
+                    z-50 drop-shadow-[0_20px_20px_rgba(0,0,0,0.85)]"
           src={Titletwo}
           alt=""
         />
       </div>
-      <div className="absolute tablet:top-8 mobile:top-[500px] mobile:right-20 laptop:top-[500px] laptop:right-[810px] rounded-lg overflow-hidden">
+      <div className="absolute tablet:top-[470px] mobile:top-[500px] right-[250px] laptop:top-[500px] laptop:right-[810px] rounded-lg overflow-hidden">
         <Contagem />
       </div>
 
@@ -140,7 +141,7 @@ function Home() {
         <Slider className="mx-2 mobile:mt-2" {...settings}>
           <div className="relative bg-yellow-300  mobile:h-72   max-w-xs  overflow-hidden rounded-2xl shadow-lg group border border-blue-900 hover:border-black border-4">
             <img
-              className="laptop:w-96 mobile:w-[120px] transition-transform group-hover:scale-110 duration-200 inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent"
+              className="laptop:w-96 mobile:w-[32] transition-transform group-hover:scale-110 duration-200 inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent"
               src={woody}
               alt=""
             />
@@ -154,7 +155,7 @@ function Home() {
           </div>
           <div className="relative bg-yellow-300  mobile:h-72   max-w-xs  overflow-hidden rounded-2xl shadow-lg group border border-blue-900 hover:border-black border-4">
             <img
-              className="laptop:h-[290px] mobile:h-[115px] transition-transform group-hover:scale-110 duration-200 inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent "
+              className="laptop:w-96 mobile:w-[32] transition-transform group-hover:scale-110 duration-200 inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent"
               src={Buzzy}
               alt=""
             />
