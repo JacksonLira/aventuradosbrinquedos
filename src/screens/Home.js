@@ -89,13 +89,13 @@ function Home() {
         className="relative flex justify-center items-center bg-cover laptop:h-screen tablet:h-[700px] mobile:h-[700px] w-full overflow-hidden"
         style={{ backgroundImage: `url(${Bgimg})` }}
       >
-        <div className="absolute bg-cover mobile:font-bold  mobile:text-sm tablet:font-bold laptop:font-bold laptop:left-[512px] top-0 font-GillCondensedB drop-shadow-[0_10px_10px_rgba(0,0,0,55)] ">
+        <div className="absolute bg-cover mobile:font-bold  mobile:text-sm tablet:font-bold laptop:font-bold laptop:left-[512px] top-0 font-GillCondensedB drop-shadow-[0_10px_10px_rgba(0,0,40,0.95)] ">
           <h1 className=" text-[#ffda00] font-GillCondensedB laptop:text-3xl tablet:text-lg mobile:text-md text-outline-blue">
             19 A 27 DE OUTUBRO
           </h1>
         </div>
         <img
-          className="absolute mobile:w-24 mobile:top-5 tablet:w-24  tablet:top-5 laptop:w-48 laptop:left-0 laptop:top-0 drop-shadow-[0_20px_20px_rgba(0,0,0,0.55)]"
+          className="absolute mobile:w-24 mobile:top-5 tablet:w-24  tablet:top-5 laptop:w-48 laptop:left-0 laptop:top-0 drop-shadow-[0_20px_20px_rgba(30,10,0,0.55)]"
           src={logo}
           alt=""
         />
