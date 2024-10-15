@@ -34,7 +34,7 @@ const CountdownTimer = () => {
   }, [])
 
   return (
-    <div className=" -skew-x-12 font-GillCondensedB">
+    <div className=" -skew-x-12 font-GillCondensedB laptop:text-3xl ">
       <h1 className="text-[#ffda00]">Contagem Regressiva</h1>
       {timeLeft.days !== undefined ? (
         <div className="grid  grid-flow-col border border-full   gap-x-2 items-end laptop:text-3xl text-white rounded-xl font-GillCondensedB">

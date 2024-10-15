@@ -25,6 +25,7 @@ import Contagem from '../components/Contagem'
 import FAQSection from '../components/FAQsection'
 import Modal from '../components/Modal'
 import Reels from '../components/Reels'
+import Video from '../video/nuvem.mp4'
 
 // eslint-disable-next-line import-helpers/order-imports
 import { Link } from 'react-router-dom'
@@ -84,55 +85,62 @@ function Home() {
 
   return (
     <div className="App">
-      <div className="absolute bg-cover rounded-lg h-23 w-full bg-transparent"></div>
       <div
-        className="relative flex justify-center items-center bg-cover laptop:h-screen tablet:h-[700px] mobile:h-[700px] w-full overflow-hidden"
+        className="flex justify-center items-center bg-cover laptop:h-screen tablet:h-[700px] mobile:h-[510px] w-full overflow-hidden"
         style={{ backgroundImage: `url(${Bgimg})` }}
       >
-        <div className="absolute bg-cover mobile:font-bold  mobile:text-sm tablet:font-bold laptop:font-bold laptop:left-[512px] top-0 font-GillCondensedB drop-shadow-[0_10px_10px_rgba(0,0,40,0.95)] ">
-          <h1 className=" text-[#ffda00] font-GillCondensedB laptop:text-3xl tablet:text-lg mobile:text-md text-outline-blue">
+        {/* <div className="flex bg-fixed z-0 justify-center items-center bg-cover h-screen mobile:h-[710px] ">
+          <video autoPlay loop muted>
+            <source src={Video} type="video/mp4" />
+          </video>
+        </div> */}
+        <div className="absolute bg-cover bg-blue-800 bg-opacity-50 w-full top-0 overflow-hidden">
+          <h1 className=" text-[#ffda00]  font-GillCondensedB laptop:text-3xl tablet:text-lg mobile:text-md text-outline-blue">
             19 A 27 DE OUTUBRO
           </h1>
         </div>
-        <img
-          className="absolute mobile:w-24 mobile:top-5 tablet:w-24  tablet:top-5 laptop:w-48 laptop:left-0 laptop:top-0 drop-shadow-[0_20px_20px_rgba(30,10,0,0.55)]"
-          src={logo}
-          alt=""
-        />
-        <h1 className="absolute text-white mobile:font-bold mobile:top-24 mobile:text-sm tablet:font-bold tablet:top-24 laptop:font-bold laptop:left-10 laptop:top-[150px] font-GillCondensedB drop-shadow-[0_10px_10px_rgba(0,0,0,55)]">
-          APRESENTA:
-        </h1>
-        <img
-          className="absolute
-                    mobile:w-[600px] mobile:top-32
-                    tablet:w-[500px] tablet: tablet:top-24
+        <div>
+          <img
+            className="absolute mobile:w-24 mobile:top-8 mobile:right-[150px] tablet:w-24  tablet:top-5 laptop:w-48 laptop:left-8 laptop:top-8 drop-shadow-[0_20px_20px_rgba(30,10,0,0.55)]"
+            src={logo}
+            alt=""
+          />
+          <h1 className="absolute text-white mobile:font-bold mobile:top-[100px] mobile:right-[150px] mobile:text-sm tablet:font-bold tablet:top-24 laptop:font-bold laptop:right-[1070px] laptop:top-[180px] font-GillCondensedB drop-shadow-[0_10px_10px_rgba(0,0,0,55)]">
+            APRESENTA:
+          </h1>
+        </div>
+        <div className="absolute mobile:top-[410px] laptop:left-24 laptop:top-52 rounded-lg overflow-hidden laptop:drop-shadow-[0_20px_20px_rgba(0,0,10,0.85)]">
+          <Contagem />
+        </div>
+        <div>
+          <img
+            className="absolute
+                    mobile:w-[350px] mobile:top-32 mobile:right-5
+                    tablet:w-[500px] tablet: tablet:top-24 
                     laptop:w-[600px] laptop: laptop:top-20
                     drop-shadow-[0_20px_20px_rgba(0,0,0,0.85)]"
-          src={perso}
-          alt=""
-        />
-        <img
-          className="absolute z-40 drop-shadow-[0_20px_20px_rgba(0,0,0,0.95)]
-                    mobile:w-[300px] mobile:top-[330px]
+            src={perso}
+            alt=""
+          />
+          <img
+            className="absolute z-40 drop-shadow-[0_20px_20px_rgba(0,0,0,0.95)]
+                    mobile:w-[250px] mobile:top-[260px] mobile:right-[70px]
                     tablet:w-[350px] tablet:top-[280px]
                     laptop:w-[400px] laptop:top-[310px]"
-          src={title}
-          alt=""
-        />
-        <img
-          className="absolute  
-                    mobile:w-[70px] mobile:ml-[280px] mobile:top-[460px]
-                    tablet:w-[90px] tablet:ml-[420px] tablet:top-[350px]
-                    laptop:w-[90px] laptop:ml-[450px] laptop:top-[450px]
+            src={title}
+            alt=""
+          />
+          <img
+            className="absolute  
+                    mobile:w-[70px] mobile:ml-[120px] mobile:top-[360px]
+                    tablet:w-[90px] tablet:ml-[420px] tablet:top-[350px] 
+                    laptop:w-[90px] laptop:ml-[510px] laptop:top-[450px]
                     z-50 drop-shadow-[0_20px_20px_rgba(0,0,0,0.85)]"
-          src={Titletwo}
-          alt=""
-        />
+            src={Titletwo}
+            alt=""
+          />
+        </div>
       </div>
-      <div className="absolute tablet:top-[470px] mobile:top-[500px] right-[250px] laptop:top-[500px] laptop:right-[810px] rounded-lg overflow-hidden">
-        <Contagem />
-      </div>
-
       <div className="relative bg-cover bg-white-300 mobile:h-96 laptop:h-screen w-full overflow-hidden ">
         <h3 className="text-2xl mobile:text-sm mt-10 mobile:mt-5 tablet:text-lg laptop:text-3xl laptop:mb-10 font-black font-GillBold">
           {' '}
@@ -225,7 +233,6 @@ function Home() {
           </div>
         </Slider>
       </div>
-
       <div
         className="flex justify-center items-center bg-cover mobile:h-24 tablet:h-52 laptop:h-72 w-full overflow-hidden"
         style={{ backgroundImage: `url(${Banner})` }}
@@ -245,7 +252,7 @@ function Home() {
         {showModal && <Modal videoUrl={videoUrl} onClose={handleCloseModal} />}
       </div>
 
-      <div className="relative mt-[-15px] mb-[-15px] bg-cover  bg-[#ffda00] laptop:h-screen mobile:h-[540px] tablet:h-96 w-full border-full border-blue-900 border-t-4 rounded-t-[20px] border-b border-blue-900 border-b-4 rounded-b-[20px]">
+      {/*   <div className="relative mt-[-15px] mb-[-15px] bg-cover  bg-[#ffda00] laptop:h-screen mobile:h-[540px] tablet:h-96 w-full border-full border-blue-900 border-t-4 rounded-t-[20px] border-b border-blue-900 border-b-4 rounded-b-[20px]">
         <div className="flex justify-center items-center mt-10">
           <div className="relative bg-[#e30024] mb-[400px]  mobile:w-30 skew-x-12 p-5 laptop:w-90 laptop:px-20">
             <h1 className="-skew-x-12 text-white mobile:text-sm laptop:text-2xl  laptop:font-GillCondensedB laptop:text-left">
@@ -276,7 +283,7 @@ function Home() {
             DE ANDY, GERANDO CIÚMES NOS DEMAIS.
           </p>
         </div>
-      </div>
+      </div>{' '} */}
 
       <div
         className="flex bg-cover  h-screen mobile:h-[590px] w-full"
@@ -299,7 +306,6 @@ function Home() {
           </span>
         </a>
       </div>
-
       <div className="relative bg-cover mt-[-20px] bg-[#ffda00] h-screen w-full border-t border-blue-900 border-t-4 rounded-t-[20px] border-b border-blue-900 border-b-4 rounded-b-[20px]">
         <div className="grid ml-96 mobile:mt-2 tablet:ml-32 mobile:ml-20 laptop:ml-96 laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[265px] tablet:w-[440px] laptop:w-[500px] ">
           <h1 className="-skew-x-12 text-white mobile:text-sm mobile:text-left laptop:text-4xl  tablet:text-3xl   font-GillCondensedB">
@@ -332,8 +338,7 @@ function Home() {
           ></iframe>
         </div>
       </div>
-
-      <div
+      {/* <div
         className="flex bg-cover h-screen w-full"
         style={{ backgroundImage: `url(${Bgimg})` }}
       >
@@ -442,8 +447,7 @@ function Home() {
             </Link>
           </div>
         </div>
-      </div>
-
+      </div> */}
       <div
         className="flex justify-center items-center bg-cover laptop:h-screen mobile:h-[400px] w-full mobile:overflow-hidden"
         style={{ backgroundImage: `url(${Bigreja})` }}
@@ -464,7 +468,6 @@ function Home() {
           allowfullscreen
         ></iframe>
       </div>
-
       <div
         className="relative bg-cover  h-screen w-full overflow-hidden"
         style={{ backgroundImage: `url(${Bgimg})` }}
@@ -511,9 +514,8 @@ function Home() {
           />
         </div>
       </div>
-
       <div className="laptop:flex mobile:flex laptop:justify-center laptop:items-center laptop:h-24 mobile:h-12 w-full bg-[#014d98]  tablet:h-24 ">
-        <h1 className="text-black border-solid font-semibold laptop:text-md laptop:place-items-center mobile:place-items-center tablet:ml-48 tablet-mt-10 mobile:text-sm ">
+        <h1 className="text-black border-solid font-semibold laptop:text-md laptop:place-items-center mobile:place-items-center  mobile:text-sm ">
           @Nova Igreja Batista 2024.
         </h1>
         <h3 className="text-sm">Todos os direitos reservados.</h3>
