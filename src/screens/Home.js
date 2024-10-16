@@ -31,7 +31,13 @@ import Video from '../video/nuvem.mp4'
 import { Link } from 'react-router-dom'
 // import { FacebookIcon, InstapaperIcon } from 'react-share'
 // eslint-disable-next-line import-helpers/order-imports
-import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube } from 'react-icons/fa'
+import {
+  FaFacebook,
+  FaInstagram,
+  FaWhatsapp,
+  FaYoutube,
+  FaUber
+} from 'react-icons/fa'
 
 function Home() {
   const [showModal, setShowModal] = useState(false)
@@ -89,7 +95,7 @@ function Home() {
         className="flex justify-center items-center bg-cover laptop:h-screen tablet:h-[700px] mobile:h-[510px] w-full overflow-hidden"
         style={{ backgroundImage: `url(${Bgimg})` }}
       >
-        {/* <div className="flex bg-fixed z-0 justify-center items-center bg-cover h-screen mobile:h-[710px] ">
+        {/* <div className="absolute  bg-fixed bg-cover object-cover z-0 w-full h-">
           <video autoPlay loop muted>
             <source src={Video} type="video/mp4" />
           </video>
@@ -147,9 +153,9 @@ function Home() {
           CONHEÇA OS NOSSOS PERSONAGENS{' '}
         </h3>
         <Slider className="mx-2 mobile:mt-2" {...settings}>
-          <div className="relative bg-yellow-300  mobile:h-72   max-w-xs  overflow-hidden rounded-2xl shadow-lg group border border-blue-900 hover:border-black border-4">
+          <div className="relative bg-yellow-300  mobile:h-72   max-w-xs  overflow-hidden rounded-2xl shadow-lg group border border-blue-900 laptop:hover:border-black border-4">
             <img
-              className="laptop:w-96 mobile:w-[32] transition-transform group-hover:scale-110 duration-200 inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent"
+              className="laptop:h-72 laptop:w-96 mobile:w-[170px] mobile:h-[130px] transition-transform group-hover:scale-110 duration-200 inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent"
               src={woody}
               alt=""
             />
@@ -161,9 +167,9 @@ function Home() {
               Andy.
             </p>
           </div>
-          <div className="relative bg-yellow-300  mobile:h-72   max-w-xs  overflow-hidden rounded-2xl shadow-lg group border border-blue-900 hover:border-black border-4">
+          <div className="relative bg-yellow-300  mobile:h-72   max-w-xs  overflow-hidden rounded-2xl shadow-lg group border border-blue-900 laptop:hover:border-black border-4">
             <img
-              className="laptop:w-96 mobile:w-[32] transition-transform group-hover:scale-110 duration-200 inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent"
+              className="laptop:h-72 mobile:w-[32] mobile:h-[130px] transition-transform group-hover:scale-110 duration-200 inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent"
               src={Buzzy}
               alt=""
             />
@@ -175,9 +181,9 @@ function Home() {
               que no fim é apenas um brinquedo.
             </p>
           </div>
-          <div className="relative bg-yellow-300  mobile:h-72   max-w-xs  overflow-hidden rounded-2xl shadow-lg group border border-blue-900 hover:border-black border-4">
+          <div className="relative bg-yellow-300  mobile:h-72   max-w-xs  overflow-hidden rounded-2xl shadow-lg group border border-blue-900 laptop:hover:border-black border-4">
             <img
-              className="laptop:w-96 mobile:w-[32] transition-transform group-hover:scale-110 duration-200 inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent"
+              className="laptop:h-72 mobile:w-[32]  mobile:h-[130px] transition-transform group-hover:scale-110 duration-200 inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent"
               src={Betty}
               alt=""
             />
@@ -189,9 +195,9 @@ function Home() {
               um romance com Woody.
             </p>
           </div>
-          <div className="relative bg-yellow-300  mobile:h-72   max-w-xs  overflow-hidden rounded-2xl shadow-lg group border border-blue-900 hover:border-black border-4">
+          <div className="relative bg-yellow-300  mobile:h-72   max-w-xs  overflow-hidden rounded-2xl shadow-lg group border border-blue-900 laptop:hover:border-black border-4">
             <img
-              className="laptop:h-72 transition-transform group-hover:scale-110 duration-200 inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent"
+              className="laptop:h-72 mobile:h-[130px] transition-transform group-hover:scale-110 duration-200 inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent"
               src={Rex}
               alt=""
             />
@@ -203,9 +209,9 @@ function Home() {
               traz bastante alegria.
             </p>
           </div>
-          <div className="relative bg-yellow-300  mobile:h-72   max-w-xs  overflow-hidden rounded-2xl shadow-lg group border border-blue-900 hover:border-black border-4">
+          <div className="relative bg-yellow-300  mobile:h-72   max-w-xs  overflow-hidden rounded-2xl shadow-lg group border border-blue-900 laptop:hover:border-black border-4">
             <img
-              className="laptop:h-72 transition-transform group-hover:scale-110 duration-200 inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent"
+              className="laptop:h-72 mobile:h-[130px] transition-transform group-hover:scale-110 duration-200 inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent"
               src={Slinky}
               alt=""
             />
@@ -217,9 +223,9 @@ function Home() {
               sempre fiel ao Woody.
             </p>
           </div>
-          <div className="relative bg-yellow-300  mobile:h-72   max-w-xs  overflow-hidden rounded-2xl shadow-lg group border border-blue-900 hover:border-black border-4">
+          <div className="relative bg-yellow-300  mobile:h-72   max-w-xs  overflow-hidden rounded-2xl shadow-lg group border border-blue-900 laptop:hover:border-black border-4">
             <img
-              className="laptop:h-72 transition-transform group-hover:scale-110 duration-200 inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent"
+              className="laptop:h-72 mobile:h-[130px] transition-transform group-hover:scale-110 duration-200 inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent"
               src={Sid}
               alt=""
             />
@@ -289,7 +295,7 @@ function Home() {
         className="flex bg-cover  h-screen mobile:h-[590px] w-full"
         style={{ backgroundImage: `url(${Bgimg})` }}
       >
-        <h1 className="absolute mt-10 laptop:left-[500px] mobile:left-[200px] tablet:left-[300px]  text-[#ffda00] font-GillCondensedB mobile:text-3xl laptop:text-5xl text-outline-blue">
+        <h1 className="absolute mt-10 laptop:left-[500px] mobile:left-[150px] tablet:left-[300px]  text-[#ffda00] font-GillCondensedB mobile:text-3xl laptop:text-5xl text-outline-blue">
           Duvidas?
         </h1>
         <div className="absolute p-10 mobile:mt-20 laptop:mt-32 laptop:h-72 mobile:h-96 mobile:overflow-y-auto tablet:mt-20 mobile:ml-[7px]  tablet:mr-10  laptop:ml-1  overflow-y-scroll">
@@ -300,15 +306,15 @@ function Home() {
           className="flex h-24 mt-[450px] mobile:mt-[450px] mb-10 laptop:ml-[450px] tablet:ml-48 mobile:ml-20 grid-flow-col gap-x-2 items-end laptop:text-5xl mobile:text-sm text-white drop-shadow-[0_10px_10px_rgba(0,0,0,10)] overflow-hidden"
           href="https://web.whatsapp.com/"
         >
-          <FaWhatsapp size={72} color="#e30024" />
-          <span className="text-[#ffda00] font-GillCondensedB text-4xl mobile:text-md text-outline-blue">
+          <FaWhatsapp size={60} color="#e30024" />
+          <span className="text-[#ffda00] font-GillCondensedB text-3xl mobile:text-md text-outline-blue">
             Fale Conosco !
           </span>
         </a>
       </div>
       <div className="relative bg-cover mt-[-20px] bg-[#ffda00] h-screen w-full border-t border-blue-900 border-t-4 rounded-t-[20px] border-b border-blue-900 border-b-4 rounded-b-[20px]">
         <div className="grid ml-96 mobile:mt-2 tablet:ml-32 mobile:ml-20 laptop:ml-96 laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[265px] tablet:w-[440px] laptop:w-[500px] ">
-          <h1 className="-skew-x-12 text-white mobile:text-sm mobile:text-left laptop:text-4xl  tablet:text-3xl   font-GillCondensedB">
+          <h1 className="-skew-x-12 text-white mobile:text-lg mobile:text-left laptop:text-4xl  tablet:text-3xl   font-GillCondensedB">
             Compartilhe nossos videos{' '}
           </h1>
           <img
@@ -317,26 +323,46 @@ function Home() {
             alt=""
           />
         </div>
-        <div className="laptop:h-[410px] mobile:h-[670px]  mobile:p-4 mobile:mt-10 tablet:h-[400px] tablet:p-2 tablet:mt-5 overflow-hidden overflow-y-auto">
+        <div className="laptop:h-[410px] mobile:h-96  mobile:p-4 mobile:mt-10 tablet:h-[400px] tablet:p-2 tablet:mt-5 overflow-hidden overflow-y-auto">
           <Reels />
         </div>
       </div>
       <div
-        className="bg-cover laptop:h-screen laptop:mt-[-15px] mobile:mt-[-15px] tablet:h-72 mobile:h-96 w-full"
+        className="bg-cover laptop:h-screen laptop:mt-[-15px] mobile:mt-[-15px] tablet:h-72 mobile:h-[500px] w-full"
         style={{ backgroundImage: `url(${ImgIgreja})` }}
       >
-        <h1 className="text-[#ffda00] font-GillCondensedB laptop:text-5xl mobile:py-10 mobile:text-lg laptop:py-10 tablet:text-xl text-outline-blue">
+        <h1 className="text-[#ffda00] font-GillCondensedB laptop:text-5xl mobile:py-4 mobile:text-lg laptop:py-10 tablet:text-xl text-outline-blue">
           Como Chegar ?
         </h1>
-        <div className="flex justify-center items-center laptop:mt-1 mobile:mt-5 tablet:mt-[-25px]">
+        <div className="flex justify-center items-center laptop:mt-1 mobile:mt-1 tablet:mt-[-25px]">
           <iframe
-            className="laptop:w-[1100px] laptop:h-[400px] mobile:h-[200px] mobile:w-[380px] tablet:w-[600px] tablet:h-[180px] laptop:drop-shadow-[0_10px_10px_rgba(0,0,0,10)] mobile:overflow-hidden"
+            className="laptop:w-[1100px] laptop:h-[400px] mobile:h-[300px] mobile:w-[420px] tablet:w-[600px] tablet:h-[180px] laptop:drop-shadow-[0_10px_10px_rgba(0,0,0,10)] mobile:overflow-hidden"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.1681625904985!2d-59.94737492502912!3d-3.049598196926207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c1b8d7b61c27d%3A0x1d8b8b78d3186636!2sNova%20Igreja%20Batista%20Grande%20Circular!5e0!3m2!1spt-BR!2sbr!4v1725812051612!5m2!1spt-BR!2sbr"
             allowfullscreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
+        {/* <div className="flex flex-row items-start space-x-10 laptop:ml-32 mobile:ml-[100px] mobile:mt-10 tablet:mt-10">
+          <a
+            className="grid grid-flow-col gap-x-2 items-end text-2xl text-white"
+            href="https://m.uber.com/ul/?action=setPickup&dropoff[latitude]=-3.0495673578322426&dropoff[longitude]=-59.94466447820079&dropoff[nickname]=Aventura"
+          >
+            <FaFacebook size={52} color="white" />
+          </a>
+          <a
+            className="grid grid-flow-col gap-x-2 items-end text-2xl text-white"
+            href="https://www.google.com/maps/dir/?api=1&destination=-3.0495673578322426,-59.94466447820079"
+          >
+            <FaInstagram size={52} color="white" />
+          </a>
+          <a
+            className="grid grid-flow-col gap-x-2 items-end text-2xl text-white"
+            href="https://www.youtube.com/@NIBGrandeCircular"
+          >
+            <FaYoutube size={52} color="white" />
+          </a>
+        </div> */}
       </div>
       {/* <div
         className="flex bg-cover h-screen w-full"
