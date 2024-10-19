@@ -5,11 +5,13 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import '../App.css'
 import logo from '../assets/_MarcaMutante NibGC ToyStory.png'
+import Nn from '../assets/99-app-logo.png'
 import title from '../assets/asaventuras.png'
 import Betty from '../assets/Betty.png'
 import Bigreja from '../assets/bigreja.png'
 import Buzzy from '../assets/Buzz_Lightyear.png'
 import ImgIgreja from '../assets/imgigreja.png'
+import Jessy from '../assets/jesspng.png'
 import perso from '../assets/personagens.png'
 import Rex from '../assets/Rex.png'
 import Sid from '../assets/Sid-Phillips.png'
@@ -18,6 +20,7 @@ import Titletwo from '../assets/titleword.png'
 import Bgimg from '../assets/toy-story-cloud.jpg'
 import Friends from '../assets/toystorypers.png'
 import Imgfinal from '../assets/Turma_Toy_Story_6.png'
+import Uber from '../assets/uber-logo-11.png'
 import Banner from '../assets/woodbuzzy.png'
 import woody from '../assets/Woody_KHIII.png'
 import wb from '../assets/woodybannery.png'
@@ -31,13 +34,7 @@ import Video from '../video/nuvem.mp4'
 import { Link } from 'react-router-dom'
 // import { FacebookIcon, InstapaperIcon } from 'react-share'
 // eslint-disable-next-line import-helpers/order-imports
-import {
-  FaFacebook,
-  FaInstagram,
-  FaWhatsapp,
-  FaYoutube,
-  FaUber
-} from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaYoutube, FaUber } from 'react-icons/fa'
 
 function Home() {
   const [showModal, setShowModal] = useState(false)
@@ -106,48 +103,51 @@ function Home() {
           </h1>
         </div>
         <div>
-          <img
-            className="absolute mobile:w-24 mobile:top-8 mobile:right-[150px] tablet:w-24  tablet:top-5 laptop:w-48 laptop:left-8 laptop:top-8 drop-shadow-[0_20px_20px_rgba(30,10,0,0.55)]"
-            src={logo}
-            alt=""
-          />
-          <h1 className="absolute text-white mobile:font-bold mobile:top-[100px] mobile:right-[150px] mobile:text-sm tablet:font-bold tablet:top-24 laptop:font-bold laptop:right-[1070px] laptop:top-[180px] font-GillCondensedB drop-shadow-[0_10px_10px_rgba(0,0,0,55)]">
+          <a href="https://nibgrandecircular.com/">
+            <img
+              className="absolute mobile:w-24 mobile:top-8 mobile:right-[250px] tablet:w-24  tablet:top-5 laptop:w-[350px] laptop:left-24 laptop:top-8 drop-shadow-[0_20px_20px_rgba(30,10,0,0.55)]"
+              href=""
+              src={logo}
+              alt=""
+            />
+          </a>
+          <h1 className="absolute text-white mobile:font-bold mobile:top-[100px] mobile:right-[250px] mobile:text-sm tablet:font-bold tablet:top-24 laptop:font-bold laptop:text-lg laptop:right-[890px] laptop:top-[295px] font-GillCondensedB drop-shadow-[0_10px_10px_rgba(0,0,0,55)]">
             APRESENTA:
           </h1>
         </div>
-        <div className="absolute mobile:top-[410px] laptop:left-24 laptop:top-52 rounded-lg overflow-hidden laptop:drop-shadow-[0_20px_20px_rgba(0,0,10,0.85)]">
+        <div className="absolute mobile:top-[410px] laptop:left-24 laptop:top-96 rounded-lg overflow-hidden laptop:drop-shadow-[0_5px_5px_rgba(1,1,1,1)]">
           <Contagem />
         </div>
         <div>
           <img
             className="absolute
-                    mobile:w-[350px] mobile:top-32 mobile:right-5
+                    mobile:w-[350px] mobile:top-32 mobile:right-32
                     tablet:w-[500px] tablet: tablet:top-24 
-                    laptop:w-[600px] laptop: laptop:top-20
+                    laptop:w-[600px] laptop:right-20 laptop:top-20
                     drop-shadow-[0_20px_20px_rgba(0,0,0,0.85)]"
             src={perso}
             alt=""
           />
           <img
             className="absolute z-40 drop-shadow-[0_20px_20px_rgba(0,0,0,0.95)]
-                    mobile:w-[250px] mobile:top-[260px] mobile:right-[70px]
+                    mobile:w-[250px] mobile:top-[260px] mobile:right-[150px]
                     tablet:w-[350px] tablet:top-[280px]
-                    laptop:w-[400px] laptop:top-[310px]"
+                    laptop:w-[400px] laptop:top-[310px] laptop:right-32"
             src={title}
             alt=""
           />
           <img
             className="absolute  
-                    mobile:w-[70px] mobile:ml-[120px] mobile:top-[360px]
+                    mobile:w-[70px] mobile:ml-[130px] mobile:top-[370px]
                     tablet:w-[90px] tablet:ml-[420px] tablet:top-[350px] 
-                    laptop:w-[90px] laptop:ml-[510px] laptop:top-[450px]
+                    laptop:w-[90px] laptop:ml-[460px] laptop:top-[450px]
                     z-50 drop-shadow-[0_20px_20px_rgba(0,0,0,0.85)]"
             src={Titletwo}
             alt=""
           />
         </div>
       </div>
-      <div className="relative bg-cover bg-white-300 mobile:h-96 laptop:h-screen w-full overflow-hidden ">
+      <div className="relative bg-cover bg-white-300 mobile:h-96 laptop:h-[450px] w-full overflow-hidden ">
         <h3 className="text-2xl mobile:text-sm mt-10 mobile:mt-5 tablet:text-lg laptop:text-3xl laptop:mb-10 font-black font-GillBold">
           {' '}
           CONHEÇA OS NOSSOS PERSONAGENS{' '}
@@ -295,22 +295,28 @@ function Home() {
         className="flex bg-cover  h-screen mobile:h-[590px] w-full"
         style={{ backgroundImage: `url(${Bgimg})` }}
       >
-        <h1 className="absolute mt-10 laptop:left-[500px] mobile:left-[150px] tablet:left-[300px]  text-[#ffda00] font-GillCondensedB mobile:text-3xl laptop:text-5xl text-outline-blue">
-          Duvidas?
-        </h1>
-        <div className="absolute p-10 mobile:mt-20 laptop:mt-32 laptop:h-72 mobile:h-96 mobile:overflow-y-auto tablet:mt-20 mobile:ml-[7px]  tablet:mr-10  laptop:ml-1  overflow-y-scroll">
+        <div className="grid mobile:mt-2 tablet:ml-32 mobile:ml-48 laptop:ml-[500px] laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[250px] tablet:w-[440px] laptop:w-[950px] laptop:h-12 mobile:h-12 ">
+          <h1 className="-skew-x-12 text-white mobile:text-lg mobile:text-center laptop:text-4xl  tablet:text-3xl   font-GillCondensedB">
+            Dúvidas?{' '}
+          </h1>
+          <img
+            className="absolute -skew-x-12 mobile:ml-[190px] mobile:w-[80px] tablet:w-[100px] mobile:mt-[-18px]  tablet:ml-[370px] tablet:w-[80px] tablet:mt-[-28px]  laptop:w-24 laptop:ml-[163px] laptop:mt-[-33px]"
+            src={Jessy}
+            alt=""
+          />
+        </div>
+        <div className="absolute laptop:p-3 mobile:mt-20 laptop:mt-24 laptop:h-96 mobile:h-96 mobile:overflow-y-auto tablet:mt-20 mobile:ml-[7px]  tablet:mr-10  laptop:ml-1  overflow-y-scroll">
           <FAQSection />
         </div>
-
-        <a
-          className="flex h-24 mt-[450px] mobile:mt-[450px] mb-10 laptop:ml-[450px] tablet:ml-48 mobile:ml-20 grid-flow-col gap-x-2 items-end laptop:text-5xl mobile:text-sm text-white drop-shadow-[0_10px_10px_rgba(0,0,0,10)] overflow-hidden"
+        {/* <a
+          className="flex flex-cols  space-x-10 laptop:ml-[250px] mobile:ml-[100px] mobile:mt-10 tablet:mt-10 drop-shadow-[0_10px_10px_rgba(0,0,0,10)] overflow-hidden"
           href="https://web.whatsapp.com/"
         >
           <FaWhatsapp size={60} color="#e30024" />
           <span className="text-[#ffda00] font-GillCondensedB text-3xl mobile:text-md text-outline-blue">
             Fale Conosco !
           </span>
-        </a>
+        </a> */}
       </div>
       <div className="relative bg-cover mt-[-20px] bg-[#ffda00] h-screen w-full border-t border-blue-900 border-t-4 rounded-t-[20px] border-b border-blue-900 border-b-4 rounded-b-[20px]">
         <div className="grid ml-96 mobile:mt-2 tablet:ml-32 mobile:ml-20 laptop:ml-96 laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[265px] tablet:w-[440px] laptop:w-[500px] ">
@@ -336,33 +342,31 @@ function Home() {
         </h1>
         <div className="flex justify-center items-center laptop:mt-1 mobile:mt-1 tablet:mt-[-25px]">
           <iframe
-            className="laptop:w-[1100px] laptop:h-[400px] mobile:h-[300px] mobile:w-[420px] tablet:w-[600px] tablet:h-[180px] laptop:drop-shadow-[0_10px_10px_rgba(0,0,0,10)] mobile:overflow-hidden"
+            className="relative laptop:w-[650px] laptop:right-[250px] laptop:h-[300px] mobile:h-[300px] mobile:w-[420px] tablet:w-[600px] tablet:h-[180px] laptop:drop-shadow-[0_10px_10px_rgba(0,0,0,10)] mobile:overflow-hidden"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.1681625904985!2d-59.94737492502912!3d-3.049598196926207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c1b8d7b61c27d%3A0x1d8b8b78d3186636!2sNova%20Igreja%20Batista%20Grande%20Circular!5e0!3m2!1spt-BR!2sbr!4v1725812051612!5m2!1spt-BR!2sbr"
             allowfullscreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-        {/* <div className="flex flex-row items-start space-x-10 laptop:ml-32 mobile:ml-[100px] mobile:mt-10 tablet:mt-10">
-          <a
-            className="grid grid-flow-col gap-x-2 items-end text-2xl text-white"
-            href="https://m.uber.com/ul/?action=setPickup&dropoff[latitude]=-3.0495673578322426&dropoff[longitude]=-59.94466447820079&dropoff[nickname]=Aventura"
-          >
-            <FaFacebook size={52} color="white" />
-          </a>
+        <div className="flex flex-cols  space-x-10 laptop:ml-[250px] mobile:ml-[100px] mobile:mt-10 tablet:mt-10">
           <a
             className="grid grid-flow-col gap-x-2 items-end text-2xl text-white"
             href="https://www.google.com/maps/dir/?api=1&destination=-3.0495673578322426,-59.94466447820079"
           >
-            <FaInstagram size={52} color="white" />
+            <img
+              className="w-12 hover:bg-white-100 rounded rounded-full"
+              src={Uber}
+              alt=""
+            />
           </a>
           <a
             className="grid grid-flow-col gap-x-2 items-end text-2xl text-white"
             href="https://www.youtube.com/@NIBGrandeCircular"
           >
-            <FaYoutube size={52} color="white" />
+            <img className="w-12" src={Nn} alt="" />
           </a>
-        </div> */}
+        </div>
       </div>
       {/* <div
         className="flex bg-cover h-screen w-full"
@@ -485,7 +489,7 @@ function Home() {
           className="static laptop:mt-10 rounded-lg laptop:w-[700px] laptop:h-[400px] mobile:w-96 mobile:h-52"
           width="624"
           height="338"
-          src="https://www.youtube.com/embed/kcohHcu_2es"
+          src="https://www.youtube.com/embed/JL2LG7cBVN0"
           title="0"
           frameBorder="0"
           autoPlay="1"
