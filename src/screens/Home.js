@@ -105,13 +105,13 @@ function Home() {
         <div>
           <a href="https://nibgrandecircular.com/">
             <img
-              className="absolute mobile:w-24 mobile:top-8 mobile:right-[250px] tablet:w-24  tablet:top-5 laptop:w-[350px] laptop:left-24 laptop:top-8 drop-shadow-[0_20px_20px_rgba(30,10,0,0.55)]"
+              className="absolute mobile:w-24 mobile:top-8 mobile:right-[150px] tablet:w-24  tablet:top-5 laptop:w-[350px] laptop:left-24 laptop:top-8 drop-shadow-[0_20px_20px_rgba(30,10,0,0.55)]"
               href=""
               src={logo}
               alt=""
             />
           </a>
-          <h1 className="absolute text-white mobile:font-bold mobile:top-[100px] mobile:right-[250px] mobile:text-sm tablet:font-bold tablet:top-24 laptop:font-bold laptop:text-lg laptop:right-[890px] laptop:top-[295px] font-GillCondensedB drop-shadow-[0_10px_10px_rgba(0,0,0,55)]">
+          <h1 className="absolute text-white mobile:font-bold mobile:top-[100px] mobile:right-[150px] mobile:text-sm tablet:font-bold tablet:top-24 laptop:font-bold laptop:text-lg laptop:right-[890px] laptop:top-[295px] font-GillCondensedB drop-shadow-[0_10px_10px_rgba(0,0,0,55)]">
             APRESENTA:
           </h1>
         </div>
@@ -121,7 +121,7 @@ function Home() {
         <div>
           <img
             className="absolute
-                    mobile:w-[350px] mobile:top-32 mobile:right-32
+                    mobile:w-[350px] mobile:top-32 mobile:right-9
                     tablet:w-[500px] tablet: tablet:top-24 
                     laptop:w-[600px] laptop:right-20 laptop:top-20
                     drop-shadow-[0_20px_20px_rgba(0,0,0,0.85)]"
@@ -130,7 +130,7 @@ function Home() {
           />
           <img
             className="absolute z-40 drop-shadow-[0_20px_20px_rgba(0,0,0,0.95)]
-                    mobile:w-[250px] mobile:top-[260px] mobile:right-[150px]
+                    mobile:w-[250px] mobile:top-[260px] mobile:right-[75px]
                     tablet:w-[350px] tablet:top-[280px]
                     laptop:w-[400px] laptop:top-[310px] laptop:right-32"
             src={title}
@@ -138,7 +138,7 @@ function Home() {
           />
           <img
             className="absolute  
-                    mobile:w-[70px] mobile:ml-[130px] mobile:top-[370px]
+                    mobile:w-[70px] mobile:ml-[110px] mobile:top-[370px]
                     tablet:w-[90px] tablet:ml-[420px] tablet:top-[350px] 
                     laptop:w-[90px] laptop:ml-[460px] laptop:top-[450px]
                     z-50 drop-shadow-[0_20px_20px_rgba(0,0,0,0.85)]"
@@ -295,17 +295,17 @@ function Home() {
         className="flex bg-cover  h-screen mobile:h-[590px] w-full"
         style={{ backgroundImage: `url(${Bgimg})` }}
       >
-        <div className="grid mobile:mt-2 tablet:ml-32 mobile:ml-48 laptop:ml-[500px] laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[250px] tablet:w-[440px] laptop:w-[950px] laptop:h-12 mobile:h-12 ">
+        <div className="grid mobile:mt-2 tablet:ml-32 mobile:ml-24 laptop:ml-[490px] laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[250px] tablet:w-[440px] laptop:w-[250px] laptop:h-12 mobile:h-12 ">
           <h1 className="-skew-x-12 text-white mobile:text-lg mobile:text-center laptop:text-4xl  tablet:text-3xl   font-GillCondensedB">
             Dúvidas?{' '}
           </h1>
           <img
-            className="absolute -skew-x-12 mobile:ml-[190px] mobile:w-[80px] tablet:w-[100px] mobile:mt-[-18px]  tablet:ml-[370px] tablet:w-[80px] tablet:mt-[-28px]  laptop:w-24 laptop:ml-[163px] laptop:mt-[-33px]"
+            className="absolute -skew-x-12 mobile:ml-[190px] mobile:w-[80px] tablet:w-[100px] mobile:mt-[-18px]  tablet:ml-[370px] tablet:w-[80px] tablet:mt-[-28px]  laptop:w-24 laptop:ml-[177px] laptop:mt-[-33px]"
             src={Jessy}
             alt=""
           />
         </div>
-        <div className="absolute laptop:p-3 mobile:mt-20 laptop:mt-24 laptop:h-96 mobile:h-96 mobile:overflow-y-auto tablet:mt-20 mobile:ml-[7px]  tablet:mr-10  laptop:ml-1  overflow-y-scroll">
+        <div className="absolute laptop:p-3 mobile:mt-20 mobile:mr-5 laptop:mt-24 laptop:h-96 mobile:h-96 mobile:overflow-y-auto tablet:mt-20 mobile:ml-[7px]  tablet:mr-10  laptop:ml-1  overflow-y-scroll">
           <FAQSection />
         </div>
         {/* <a
@@ -318,7 +318,7 @@ function Home() {
           </span>
         </a> */}
       </div>
-      <div className="relative bg-cover mt-[-20px] bg-[#ffda00] h-screen w-full border-t border-blue-900 border-t-4 rounded-t-[20px] border-b border-blue-900 border-b-4 rounded-b-[20px]">
+      <div className="relative bg-cover mt-[-20px] bg-[#ffda00] h-[750px] w-full border-t border-blue-900 border-t-4 rounded-t-[20px] border-b border-blue-900 border-b-4 rounded-b-[20px]">
         <div className="grid ml-96 mobile:mt-2 tablet:ml-32 mobile:ml-20 laptop:ml-96 laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[265px] tablet:w-[440px] laptop:w-[500px] ">
           <h1 className="-skew-x-12 text-white mobile:text-lg mobile:text-left laptop:text-4xl  tablet:text-3xl   font-GillCondensedB">
             Compartilhe nossos videos{' '}
@@ -329,7 +329,7 @@ function Home() {
             alt=""
           />
         </div>
-        <div className="laptop:h-[410px] mobile:h-96  mobile:p-4 mobile:mt-10 tablet:h-[400px] tablet:p-2 tablet:mt-5 overflow-hidden overflow-y-auto">
+        <div className="laptop:h-[610px] mobile:h-[610px]  mobile:p-4 mobile:mt-5 tablet:h-[400px] tablet:p-2 tablet:mt-5 overflow-hidden overflow-y-auto">
           <Reels />
         </div>
       </div>
@@ -349,10 +349,10 @@ function Home() {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-        <div className="flex flex-cols  space-x-10 laptop:ml-[250px] mobile:ml-[100px] mobile:mt-10 tablet:mt-10">
+        <div className="flex flex-cols  space-x-10 laptop:ml-[250px] mobile:ml-[140px] mobile:mt-10 tablet:mt-10">
           <a
             className="grid grid-flow-col gap-x-2 items-end text-2xl text-white"
-            href="https://www.google.com/maps/dir/?api=1&destination=-3.0495673578322426,-59.94466447820079"
+            href="https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[latitude]=-3.0495419437079705&dropoff[longitude]=-59.944822777222164&dropoff[nickname]=DESTINATION_NAME"
           >
             <img
               className="w-12 hover:bg-white-100 rounded rounded-full"
@@ -362,7 +362,9 @@ function Home() {
           </a>
           <a
             className="grid grid-flow-col gap-x-2 items-end text-2xl text-white"
-            href="https://www.youtube.com/@NIBGrandeCircular"
+            href="https://www.google.com/maps/dir/?api=1&destination=-3.0495673578322426,-59.94466447820079"
+            target="_blank"
+            rel="noreferrer"
           >
             <img className="w-12" src={Nn} alt="" />
           </a>

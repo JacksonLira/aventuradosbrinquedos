@@ -7,8 +7,7 @@ const MultipleInstagramEmbeds = () => {
     'https://www.instagram.com/reel/DBOykTAp54A/', // Post 1
     'https://www.instagram.com/reel/DBMNJpOpKUq/', // Reel 1
     'https://www.instagram.com/reel/DBHDb8gJC6j/',
-    'https://www.instagram.com/reel/DA6hO-XPsC_/',
-    'https://www.instagram.com/reel/DA1sLqYPCUO/'
+    'https://www.instagram.com/reel/DA6hO-XPsC_/'
   ]
 
   return (
@@ -16,7 +15,7 @@ const MultipleInstagramEmbeds = () => {
       {instagramUrls.map((url, index) => (
         <div
           key={index}
-          className="  laptop:w-[360px] mobile:p-5 mobile:w-[550px] laptop:gap-4  mb-12 mr-10 drop-shadow-[0_20px_20px_rgba(0,0,0,0.85)]"
+          className="  laptop:w-[360px] mobile:gap-5 mobile:w-[380px]  mobile:mb-24 laptop:gap-4  laptop:mb-12 laptop:mr-10 drop-shadow-[0_20px_20px_rgba(0,0,0,0.85)]"
         >
           <InstagramEmbed url={url} />
         </div>
