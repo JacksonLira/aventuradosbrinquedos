@@ -108,7 +108,7 @@ function Home() {
               alt=""
             />
           </a>
-          <h1 className="absolute text-white mobile:font-bold mobile:top-[100px] mobile:right-[50px] mobile:text-sm tablet:font-bold tablet:top-[100px] tablet:mr-[270px] laptop:font-bold laptop:text-lg laptop:right-[620px] laptop:top-[295px] font-GillCondensedB drop-shadow-[0_10px_10px_rgba(0,0,0,55)]">
+          <h1 className="absolute text-white mobile:font-bold mobile:top-[100px] mobile:right-[150px] mobile:text-sm tablet:font-bold tablet:top-[100px] tablet:mr-[270px] laptop:font-bold laptop:text-lg laptop:right-[620px] laptop:top-[295px] font-GillCondensedB drop-shadow-[0_10px_10px_rgba(0,0,0,55)]">
             APRESENTA:
           </h1>
         </div>
