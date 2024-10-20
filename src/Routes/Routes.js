@@ -21,7 +21,7 @@ function App() {
         <Route path="/" element={<Home />} />
 
         {/* Rota para a Página da Galeria */}
-        <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/gallery/27" element={<GalleryPage />} />
         <Route path="/gallery/19" element={<GalleryPagenine />} />
         <Route path="/gallery/20" element={<GalleryPagezero />} />
         <Route path="/gallery/21" element={<GalleryPageone />} />

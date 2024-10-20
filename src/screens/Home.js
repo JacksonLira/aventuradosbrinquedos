@@ -18,23 +18,20 @@ import Sid from '../assets/Sid-Phillips.png'
 import Slinky from '../assets/Slinky.png'
 import Titletwo from '../assets/titleword.png'
 import Bgimg from '../assets/toy-story-cloud.jpg'
-import Friends from '../assets/toystorypers.png'
 import Imgfinal from '../assets/Turma_Toy_Story_6.png'
 import Uber from '../assets/uber-logo-11.png'
 import Banner from '../assets/woodbuzzy.png'
 import woody from '../assets/Woody_KHIII.png'
-import wb from '../assets/woodybannery.png'
 import Contagem from '../components/Contagem'
 import FAQSection from '../components/FAQsection'
 import Modal from '../components/Modal'
 import Reels from '../components/Reels'
-import Video from '../video/nuvem.mp4'
 
-// eslint-disable-next-line import-helpers/order-imports
+// eslint-disable-next-line import-helpers/order-imports, no-unused-vars
 import { Link } from 'react-router-dom'
 // import { FacebookIcon, InstapaperIcon } from 'react-share'
 // eslint-disable-next-line import-helpers/order-imports
-import { FaFacebook, FaInstagram, FaYoutube, FaUber } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa'
 
 function Home() {
   const [showModal, setShowModal] = useState(false)
@@ -63,8 +60,8 @@ function Home() {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 1,
           arrows: true
         }
       },
@@ -89,7 +86,7 @@ function Home() {
   return (
     <div className="App">
       <div
-        className="flex justify-center items-center bg-cover laptop:h-screen tablet:h-[700px] mobile:h-[510px] w-full overflow-hidden"
+        className="flex justify-center items-center bg-cover laptop:h-screen tablet:h-[600px] mobile:h-[510px] w-full overflow-hidden"
         style={{ backgroundImage: `url(${Bgimg})` }}
       >
         {/* <div className="absolute  bg-fixed bg-cover object-cover z-0 w-full h-">
@@ -105,25 +102,25 @@ function Home() {
         <div>
           <a href="https://nibgrandecircular.com/">
             <img
-              className="absolute mobile:w-24 mobile:top-8 mobile:right-[150px] tablet:w-24  tablet:top-5 laptop:w-[350px] laptop:left-24 laptop:top-8 drop-shadow-[0_20px_20px_rgba(30,10,0,0.55)]"
+              className="absolute mobile:w-24 mobile:top-8 mobile:right-[150px] tablet:w-32  tablet:top-1 tablet:mr-[250px] laptop:w-[350px] laptop:left-24 laptop:top-8 drop-shadow-[0_20px_20px_rgba(30,10,0,0.55)]"
               href=""
               src={logo}
               alt=""
             />
           </a>
-          <h1 className="absolute text-white mobile:font-bold mobile:top-[100px] mobile:right-[150px] mobile:text-sm tablet:font-bold tablet:top-24 laptop:font-bold laptop:text-lg laptop:right-[890px] laptop:top-[295px] font-GillCondensedB drop-shadow-[0_10px_10px_rgba(0,0,0,55)]">
+          <h1 className="absolute text-white mobile:font-bold mobile:top-[100px] mobile:right-[150px] mobile:text-sm tablet:font-bold tablet:top-[100px] tablet:mr-[270px] laptop:font-bold laptop:text-lg laptop:right-[620px] laptop:top-[295px] font-GillCondensedB drop-shadow-[0_10px_10px_rgba(0,0,0,55)]">
             APRESENTA:
           </h1>
         </div>
-        <div className="absolute mobile:top-[410px] laptop:left-24 laptop:top-96 rounded-lg overflow-hidden laptop:drop-shadow-[0_5px_5px_rgba(1,1,1,1)]">
+        <div className="absolute mobile:top-[410px] tablet:top-[460px] laptop:left-12 laptop:top-96 rounded-lg overflow-hidden laptop:drop-shadow-[0_5px_5px_rgba(1,1,1,1)]">
           <Contagem />
         </div>
         <div>
           <img
             className="absolute
                     mobile:w-[350px] mobile:top-32 mobile:right-9
-                    tablet:w-[500px] tablet: tablet:top-24 
-                    laptop:w-[600px] laptop:right-20 laptop:top-20
+                    tablet:w-[400px] tablet:mr-[230px] tablet:top-24 
+                    laptop:w-[600px] laptop:mr-[100px] laptop:top-20
                     drop-shadow-[0_20px_20px_rgba(0,0,0,0.85)]"
             src={perso}
             alt=""
@@ -131,16 +128,16 @@ function Home() {
           <img
             className="absolute z-40 drop-shadow-[0_20px_20px_rgba(0,0,0,0.95)]
                     mobile:w-[250px] mobile:top-[260px] mobile:right-[75px]
-                    tablet:w-[350px] tablet:top-[280px]
-                    laptop:w-[400px] laptop:top-[310px] laptop:right-32"
+                    tablet:w-[300px] tablet:top-[230px] tablet:right-[320px]
+                    laptop:w-[400px] laptop:top-[290px] laptop:right-48"
             src={title}
             alt=""
           />
           <img
             className="absolute  
                     mobile:w-[70px] mobile:ml-[110px] mobile:top-[370px]
-                    tablet:w-[90px] tablet:ml-[420px] tablet:top-[350px] 
-                    laptop:w-[90px] laptop:ml-[460px] laptop:top-[450px]
+                    tablet:w-[80px] tablet:ml-[120px] tablet:top-[350px] 
+                    laptop:w-[90px] laptop:ml-[395px] laptop:top-[444px]
                     z-50 drop-shadow-[0_20px_20px_rgba(0,0,0,0.85)]"
             src={Titletwo}
             alt=""
@@ -155,7 +152,7 @@ function Home() {
         <Slider className="mx-2 mobile:mt-2" {...settings}>
           <div className="relative bg-yellow-300  mobile:h-72   max-w-xs  overflow-hidden rounded-2xl shadow-lg group border border-blue-900 laptop:hover:border-black border-4">
             <img
-              className="laptop:h-72 laptop:w-96 mobile:w-[170px] mobile:h-[130px] transition-transform group-hover:scale-110 duration-200 inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent"
+              className="laptop:h-72 tablet:w-96 tablet:h-72 laptop:w-96 mobile:w-[170px] mobile:h-[130px] transition-transform group-hover:scale-110 duration-200 inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent"
               src={woody}
               alt=""
             />
@@ -169,21 +166,21 @@ function Home() {
           </div>
           <div className="relative bg-yellow-300  mobile:h-72   max-w-xs  overflow-hidden rounded-2xl shadow-lg group border border-blue-900 laptop:hover:border-black border-4">
             <img
-              className="laptop:h-72 mobile:w-[32] mobile:h-[130px] transition-transform group-hover:scale-110 duration-200 inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent"
+              className="laptop:h-72 mobile:w-[32] tablet:w-96 tablet:h-72 mobile:h-[130px] transition-transform group-hover:scale-110 duration-200 inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent"
               src={Buzzy}
               alt=""
             />
             <h3 className="absolute inset-0 flex laptop:items-center mobile:mt-20 tablet:text-2xl tablet:mt-32 laptop:mt-4 p-1 laptop:text-2xl font-bold mb-2 text-[#014d98] text-outline-black font-GillCondensedB">
               Buzz
             </h3>
-            <p className=" laptop:absolute tablet:absolute mobile:flex mobile:mt-1 tablet:mb-5 inset-0 flex laptop:items-end tablet:items-end tablet:text-lg  mobile:text-sm laptop:text-lg text-black font-GillMedium font-bold text-outline-white">
+            <p className=" laptop:absolute tablet:absolute mobile:flex mobile:mt-1 tablet:mb-1 inset-0 flex laptop:items-end tablet:items-end tablet:text-lg  mobile:text-sm laptop:text-lg text-black font-GillMedium font-bold text-outline-white">
               Acredita ser um patrulheiro espacial, mas, ao longo da peça verá
               que no fim é apenas um brinquedo.
             </p>
           </div>
           <div className="relative bg-yellow-300  mobile:h-72   max-w-xs  overflow-hidden rounded-2xl shadow-lg group border border-blue-900 laptop:hover:border-black border-4">
             <img
-              className="laptop:h-72 mobile:w-[32]  mobile:h-[130px] transition-transform group-hover:scale-110 duration-200 inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent"
+              className="laptop:h-72 mobile:w-[32] mobile:h-[130px] tablet:w-96 tablet:h-72 transition-transform group-hover:scale-110 duration-200 inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent"
               src={Betty}
               alt=""
             />
@@ -197,7 +194,7 @@ function Home() {
           </div>
           <div className="relative bg-yellow-300  mobile:h-72   max-w-xs  overflow-hidden rounded-2xl shadow-lg group border border-blue-900 laptop:hover:border-black border-4">
             <img
-              className="laptop:h-72 mobile:h-[130px] transition-transform group-hover:scale-110 duration-200 inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent"
+              className="laptop:h-72 mobile:h-[130px] tablet:w-96 tablet:h-72 transition-transform group-hover:scale-110 duration-200 inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent"
               src={Rex}
               alt=""
             />
@@ -211,7 +208,7 @@ function Home() {
           </div>
           <div className="relative bg-yellow-300  mobile:h-72   max-w-xs  overflow-hidden rounded-2xl shadow-lg group border border-blue-900 laptop:hover:border-black border-4">
             <img
-              className="laptop:h-72 mobile:h-[130px] transition-transform group-hover:scale-110 duration-200 inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent"
+              className="laptop:h-72 mobile:h-[130px] tablet:w-96 tablet:h-72 transition-transform group-hover:scale-110 duration-200 inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent"
               src={Slinky}
               alt=""
             />
@@ -225,7 +222,7 @@ function Home() {
           </div>
           <div className="relative bg-yellow-300  mobile:h-72   max-w-xs  overflow-hidden rounded-2xl shadow-lg group border border-blue-900 laptop:hover:border-black border-4">
             <img
-              className="laptop:h-72 mobile:h-[130px] transition-transform group-hover:scale-110 duration-200 inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent"
+              className="laptop:h-72 mobile:h-[130px] tablet:w-96 tablet:h-72 transition-transform group-hover:scale-110 duration-200 inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent"
               src={Sid}
               alt=""
             />
@@ -295,12 +292,12 @@ function Home() {
         className="flex bg-cover  h-screen mobile:h-[590px] w-full"
         style={{ backgroundImage: `url(${Bgimg})` }}
       >
-        <div className="grid mobile:mt-2 tablet:ml-32 mobile:ml-24 laptop:ml-[490px] laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[250px] tablet:w-[440px] laptop:w-[250px] laptop:h-12 mobile:h-12 ">
+        <div className="grid mobile:mt-2 tablet:ml-[340px] mobile:ml-[80px] laptop:ml-[490px] laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[250px] tablet:w-[240px] laptop:w-[250px] laptop:h-12 mobile:h-12 ">
           <h1 className="-skew-x-12 text-white mobile:text-lg mobile:text-center laptop:text-4xl  tablet:text-3xl   font-GillCondensedB">
             Dúvidas?{' '}
           </h1>
           <img
-            className="absolute -skew-x-12 mobile:ml-[190px] mobile:w-[80px] tablet:w-[100px] mobile:mt-[-18px]  tablet:ml-[370px] tablet:w-[80px] tablet:mt-[-28px]  laptop:w-24 laptop:ml-[177px] laptop:mt-[-33px]"
+            className="absolute -skew-x-12 mobile:ml-[190px] mobile:w-[80px] tablet:w-[100px] mobile:mt-[-18px]  tablet:ml-[170px] tablet:w-[80px] tablet:mt-[-18px]  laptop:w-24 laptop:ml-[177px] laptop:mt-[-33px]"
             src={Jessy}
             alt=""
           />
@@ -318,8 +315,8 @@ function Home() {
           </span>
         </a> */}
       </div>
-      <div className="relative bg-cover mt-[-20px] bg-[#ffda00] h-[750px] w-full border-t border-blue-900 border-t-4 rounded-t-[20px] border-b border-blue-900 border-b-4 rounded-b-[20px]">
-        <div className="grid ml-96 mobile:mt-2 tablet:ml-32 mobile:ml-20 laptop:ml-96 laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[265px] tablet:w-[440px] laptop:w-[500px] ">
+      <div className="relative bg-cover mt-[-20px] bg-[#ffda00] h-[750px] tablet:h-[850px] w-full border-t border-blue-900 border-t-4 rounded-t-[20px] border-b border-blue-900 border-b-4 rounded-b-[20px]">
+        <div className="grid ml-96 mobile:mt-2 tablet:ml-[240px] mobile:ml-20 laptop:ml-96 laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[265px] tablet:w-[440px] laptop:w-[500px] ">
           <h1 className="-skew-x-12 text-white mobile:text-lg mobile:text-left laptop:text-4xl  tablet:text-3xl   font-GillCondensedB">
             Compartilhe nossos videos{' '}
           </h1>
@@ -329,7 +326,7 @@ function Home() {
             alt=""
           />
         </div>
-        <div className="laptop:h-[610px] mobile:h-[610px]  mobile:p-4 mobile:mt-5 tablet:h-[400px] tablet:p-2 tablet:mt-5 overflow-hidden overflow-y-auto">
+        <div className="laptop:h-[610px] mobile:h-[610px]  mobile:p-4 mobile:mt-5 tablet:h-[700px] tablet:mr-10 tablet:mt-5 overflow-hidden overflow-y-auto">
           <Reels />
         </div>
       </div>
@@ -342,14 +339,14 @@ function Home() {
         </h1>
         <div className="flex justify-center items-center laptop:mt-1 mobile:mt-1 tablet:mt-[-25px]">
           <iframe
-            className="relative laptop:w-[650px] laptop:right-[250px] laptop:h-[300px] mobile:h-[300px] mobile:w-[420px] tablet:w-[600px] tablet:h-[180px] laptop:drop-shadow-[0_10px_10px_rgba(0,0,0,10)] mobile:overflow-hidden"
+            className="relative laptop:w-[650px] laptop:right-[250px] laptop:h-[300px] mobile:h-[300px] mobile:w-[420px] tablet:right-[250px] tablet:top-10 tablet:w-[450px] tablet:h-[120px] laptop:drop-shadow-[0_10px_10px_rgba(0,0,0,10)] mobile:overflow-hidden"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.1681625904985!2d-59.94737492502912!3d-3.049598196926207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c1b8d7b61c27d%3A0x1d8b8b78d3186636!2sNova%20Igreja%20Batista%20Grande%20Circular!5e0!3m2!1spt-BR!2sbr!4v1725812051612!5m2!1spt-BR!2sbr"
             allowfullscreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-        <div className="flex flex-cols  space-x-10 laptop:ml-[250px] mobile:ml-[140px] mobile:mt-10 tablet:mt-10">
+        <div className="flex flex-cols  space-x-10 laptop:ml-[280px] laptop:mt-20 mobile:ml-[140px] mobile:mt-10 tablet:mt-12  tablet:ml-32">
           <a
             className="grid grid-flow-col gap-x-2 items-end text-2xl text-white"
             href="https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[latitude]=-3.0495419437079705&dropoff[longitude]=-59.944822777222164&dropoff[nickname]=DESTINATION_NAME"
@@ -370,7 +367,7 @@ function Home() {
           </a>
         </div>
       </div>
-      {/* <div
+      <div
         className="flex bg-cover h-screen w-full"
         style={{ backgroundImage: `url(${Bgimg})` }}
       >
@@ -378,7 +375,7 @@ function Home() {
         <h1 className="absolute mobile:ml-32 mobile:mt-5 text-[#ffda00] font-GillCondensedB laptop:text-5xl laptop:ml-[370px] tablet:ml-[220px] mobile:text-lg tablet:text-3xl text-outline-blue">
           Baixe suas fotos aqui!
         </h1>
-        <div className="grid laptop:mt-24 laptop:ml-10 tablet:ml-20 laptop:space-x-3 laptop:p-8 mobile:space-y-2 tablet:space-y-2 mobile:mt-20  mobile:grid-cols-2 mobile:p-2 laptop:grid-cols-3 laptop:grid-rows-4 justify-center items-center mobile:overflow-hidden ">
+        <div className="grid laptop:mt-24 laptop:ml-10 tablet:ml-20 laptop:space-x-3 laptop:p-8 mobile:space-y-2 tablet:space-y-2 mobile:mt-20  mobile:grid-cols-2 mobile:p-2 laptop:grid-cols-3 laptop:grid-rows-3 justify-center items-center mobile:overflow-hidden ">
           <div className="relative bg-[#e30024] laptop:ml-[3px] laptop:mt-[5px] skew-x-12 laptop:p-4 laptop:w-80 mobile:w-[150px] mobile:ml-5 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]">
             <h1 className="absolute laptop:mt-[-40px] skew-y-6 -skew-x-12 laptop:text-7xl mobile:text-3xl mobile:mt-[-15px] text-[#ffda00] font-black hover:mt-[-50px]">
               19
@@ -467,7 +464,7 @@ function Home() {
               <h2 className=" -skew-x-12 font-GillCondensedB">OUTUBRO</h2>
             </Link>
           </div>
-          <div className="relative bg-[#e30024] skew-x-12 laptop:p-4 laptop:w-80 mobile:w-48 mobile:ml-20 tablet:left-10 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]">
+          <div className="relative bg-[#e30024] skew-x-12 laptop:p-4 laptop:w-80 mobile:w-48 laptop:ml-4 mobile:ml-20 tablet:left-10 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]">
             <h1 className="absolute laptop:mt-[-40px] skew-y-6 -skew-x-12 laptop:text-7xl mobile:text-4xl mobile:mt-[-15px] text-[#ffda00] font-black hover:mt-[-50px]">
               27
             </h1>
@@ -479,19 +476,19 @@ function Home() {
             </Link>
           </div>
         </div>
-      </div> */}
+      </div>
       <div
         className="flex justify-center items-center bg-cover laptop:h-screen mobile:h-[400px] w-full mobile:overflow-hidden"
         style={{ backgroundImage: `url(${Bigreja})` }}
       >
-        <h1 className="absolute mb-96 laptop:mt-[-70px] text-[#ffda00] p-3 mobile:mt-20 font-GillCondensedB laptop:text-5xl tablet:xl text-outline-blue">
+        <h1 className="absolute mb-96 laptop:mt-[-70px] text-[#ffda00] p-3 mobile:mt-20 font-GillCondensedB laptop:text-5xl tablet:text-3xl text-outline-blue">
           Conheça Nossa Igreja!
         </h1>
         <iframe
-          className="static laptop:mt-10 rounded-lg laptop:w-[700px] laptop:h-[400px] mobile:w-96 mobile:h-52"
+          className="static laptop:mt-10 rounded-lg laptop:w-[700px] laptop:h-[400px] tablet:mt-10 tablet:w-[535px] tablet:h-[300px] mobile:w-96 mobile:h-52 drop-shadow-[0_10px_10px_rgba(200,200,1,1)]"
           width="624"
           height="338"
-          src="https://www.youtube.com/embed/JL2LG7cBVN0"
+          src="https://www.youtube.com/embed/_OhfUKTOECQ"
           title="0"
           frameBorder="0"
           autoPlay="1"
@@ -547,10 +544,12 @@ function Home() {
         </div>
       </div>
       <div className="laptop:flex mobile:flex laptop:justify-center laptop:items-center laptop:h-24 mobile:h-12 w-full bg-[#014d98]  tablet:h-24 ">
-        <h1 className="text-black border-solid font-semibold laptop:text-md laptop:place-items-center mobile:place-items-center  mobile:text-sm ">
+        <h1 className="text-black border-solid font-semibold laptop:text-md laptop:place-items-center laptop:ml-12 laptop:mt-2 tablet:ml-72 tablet:mt-8 mobile:ml-10 mobile:mt-4 mobile:text-sm ">
           @Nova Igreja Batista 2024.
         </h1>
-        <h3 className="text-sm">Todos os direitos reservados.</h3>
+        <h3 className="text-sm mobile:mt-4 tablet:mt-8 laptop:mt-2">
+          Todos os direitos reservados.
+        </h3>
       </div>
     </div>
   )

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 const CountdownTimer = () => {
   // Definir a data e hora final (no formato "AAAA-MM-DDTHH:MM:SS")
-  const targetDate = new Date('2024-10-19T19:29:59')
+  const targetDate = new Date('2024-10-20T19:30:00')
 
   const calculateTimeLeft = () => {
     const now = new Date()
@@ -35,9 +35,9 @@ const CountdownTimer = () => {
 
   return (
     <div className=" -skew-x-12 font-GillCondensedB laptop:text-3xl ">
-      <h1 className="text-[#ffda00]">Contagem Regressiva</h1>
+      <h1 className="text-[#ffda00]">Próxima apresentação - 20/10</h1>
       {timeLeft.days !== undefined ? (
-        <div className="grid  grid-flow-col border border-full   gap-x-2 items-end laptop:text-3xl text-white rounded-xl font-GillCondensedB">
+        <div className="grid  grid-flow-col border border-full p-3 gap-x-2 items-end laptop:text-3xl text-white rounded-xl font-GillCondensedB">
           <h2>{timeLeft.days} Dias</h2>
           <h2>{timeLeft.hours} Horas</h2>
           <h2>{timeLeft.minutes} Minutos</h2>

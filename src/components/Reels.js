@@ -11,11 +11,11 @@ const MultipleInstagramEmbeds = () => {
   ]
 
   return (
-    <div className="grid bg-transparent laptop:grid-cols-3 laptop:grid-row-2  mobile:grid-row-5 mobile:py-10 mobile:grid-cols-1">
+    <div className="grid bg-transparent laptop:grid-cols-3 laptop:grid-row-2  mobile:grid-row-5 mobile:py-10 mobile:grid-cols-1 tablet:grid-cols-2">
       {instagramUrls.map((url, index) => (
         <div
           key={index}
-          className="  laptop:w-[360px] mobile:gap-5 mobile:w-[380px]  mobile:mb-24 laptop:gap-4  laptop:mb-12 laptop:mr-10 drop-shadow-[0_20px_20px_rgba(0,0,0,0.85)]"
+          className="  laptop:w-[360px] mobile:gap-5 mobile:w-[380px] tablet:w-[390px] tablet:h-full  mobile:mb-24 tablet:mb-12 laptop:gap-4 tablet:ml-10 laptop:mb-12 laptop:mr-10 drop-shadow-[0_20px_20px_rgba(0,0,0,0.85)]"
         >
           <InstagramEmbed url={url} />
         </div>

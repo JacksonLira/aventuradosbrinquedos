@@ -48,8 +48,7 @@ const FAQSection = () => {
         'Haverá possíveis filas, como no fim semana ou feriado, ou entre 1 apresentação e outra, mas fazemos o possível para colocar você dentro do auditório.'
     },
     {
-      question:
-        'Pode consumir alimentos no auditório? Pois gostaria de levar o meu próprio alimento.',
+      question: 'Pode consumir alimentos no auditório?',
       answer: 'Pode trazer sim, não temos restrição referente a isso.'
     },
     {
@@ -87,27 +86,17 @@ const FAQSection = () => {
         'Pode sim, ao final das programações você pode tirar fotos com os personagens'
     },
     {
-      question: 'O auditório da igreja é climatizado?',
-      answer:
-        'É sim, o nosso auditório foi preparado para lhe dar o melhor conforto'
-    },
-    {
       question:
         'Se o estacionamento lotar eu terei que colocar o meu carro da rua?',
       answer:
         'Não será necessário, temos um estacionamento em anexo do shopping Cidade Leste que em último caso, usaremos para colocar os carros extras'
-    },
-    {
-      question: 'O auditório da igreja é climatizado?',
-      answer:
-        'É sim, o nosso auditório foi preparado para lhe dar o melhor conforto'
     }
     // Adicione mais perguntas e respostas aqui
   ]
 
   return (
     <section className=" bg-transparent">
-      <div className="grid laptop:grid-cols-3 mobile:grid-cols-1 laptop:grid-rows-4 mobile:grid-rows-5 overflow-hidden laptop:gap-7 mobile:gap-1">
+      <div className="grid laptop:grid-cols-3 mobile:grid-cols-1 tablet:grid-cols-2 tablet:gap-5 laptop:grid-rows-4 mobile:grid-rows-5 overflow-hidden laptop:gap-7 mobile:gap-1">
         {faqs.map((faq, index) => (
           <FAQItem key={index} question={faq.question} answer={faq.answer} />
         ))}
