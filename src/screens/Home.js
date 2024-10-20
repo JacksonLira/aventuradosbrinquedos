@@ -102,13 +102,13 @@ function Home() {
         <div>
           <a href="https://nibgrandecircular.com/">
             <img
-              className="absolute mobile:w-24 mobile:top-8 mobile:right-[150px] tablet:w-32  tablet:top-1 tablet:mr-[250px] laptop:w-[350px] laptop:left-24 laptop:top-8 drop-shadow-[0_20px_20px_rgba(30,10,0,0.55)]"
+              className="absolute mobile:w-24 mobile:top-8 mobile:right-[150px] tablet:w-32  tablet:top-1 tablet:mr-[150px] laptop:w-[350px] laptop:left-24 laptop:top-8 drop-shadow-[0_20px_20px_rgba(30,10,0,0.55)]"
               href=""
               src={logo}
               alt=""
             />
           </a>
-          <h1 className="absolute text-white mobile:font-bold mobile:top-[100px] mobile:right-[150px] mobile:text-sm tablet:font-bold tablet:top-[100px] tablet:mr-[270px] laptop:font-bold laptop:text-lg laptop:right-[620px] laptop:top-[295px] font-GillCondensedB drop-shadow-[0_10px_10px_rgba(0,0,0,55)]">
+          <h1 className="absolute text-white mobile:font-bold mobile:top-[100px] mobile:right-[50px] mobile:text-sm tablet:font-bold tablet:top-[100px] tablet:mr-[270px] laptop:font-bold laptop:text-lg laptop:right-[620px] laptop:top-[295px] font-GillCondensedB drop-shadow-[0_10px_10px_rgba(0,0,0,55)]">
             APRESENTA:
           </h1>
         </div>
@@ -119,7 +119,7 @@ function Home() {
           <img
             className="absolute
                     mobile:w-[350px] mobile:top-32 mobile:right-9
-                    tablet:w-[400px] tablet:mr-[230px] tablet:top-24 
+                    tablet:w-[400px] tablet:mr-[130px] tablet:top-24 
                     laptop:w-[600px] laptop:mr-[100px] laptop:top-20
                     drop-shadow-[0_20px_20px_rgba(0,0,0,0.85)]"
             src={perso}
@@ -128,7 +128,7 @@ function Home() {
           <img
             className="absolute z-40 drop-shadow-[0_20px_20px_rgba(0,0,0,0.95)]
                     mobile:w-[250px] mobile:top-[260px] mobile:right-[75px]
-                    tablet:w-[300px] tablet:top-[230px] tablet:right-[320px]
+                    tablet:w-[300px] tablet:top-[230px] tablet:right-[220px]
                     laptop:w-[400px] laptop:top-[290px] laptop:right-48"
             src={title}
             alt=""
@@ -136,7 +136,7 @@ function Home() {
           <img
             className="absolute  
                     mobile:w-[70px] mobile:ml-[110px] mobile:top-[370px]
-                    tablet:w-[80px] tablet:ml-[120px] tablet:top-[350px] 
+                    tablet:w-[80px] tablet:ml-[140px] tablet:top-[350px] 
                     laptop:w-[90px] laptop:ml-[395px] laptop:top-[444px]
                     z-50 drop-shadow-[0_20px_20px_rgba(0,0,0,0.85)]"
             src={Titletwo}
@@ -292,7 +292,7 @@ function Home() {
         className="flex bg-cover  h-screen mobile:h-[590px] w-full"
         style={{ backgroundImage: `url(${Bgimg})` }}
       >
-        <div className="grid mobile:mt-2 tablet:ml-[340px] mobile:ml-[80px] laptop:ml-[490px] laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[250px] tablet:w-[240px] laptop:w-[250px] laptop:h-12 mobile:h-12 ">
+        <div className="grid mobile:mt-2 tablet:ml-[260px] mobile:ml-[80px] laptop:ml-[490px] laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[250px] tablet:w-[240px] laptop:w-[250px] laptop:h-12 mobile:h-12 ">
           <h1 className="-skew-x-12 text-white mobile:text-lg mobile:text-center laptop:text-4xl  tablet:text-3xl   font-GillCondensedB">
             Dúvidas?{' '}
           </h1>
@@ -316,7 +316,7 @@ function Home() {
         </a> */}
       </div>
       <div className="relative bg-cover mt-[-20px] bg-[#ffda00] h-[750px] tablet:h-[850px] w-full border-t border-blue-900 border-t-4 rounded-t-[20px] border-b border-blue-900 border-b-4 rounded-b-[20px]">
-        <div className="grid ml-96 mobile:mt-2 tablet:ml-[240px] mobile:ml-20 laptop:ml-96 laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[265px] tablet:w-[440px] laptop:w-[500px] ">
+        <div className="grid ml-96 mobile:mt-2 tablet:ml-[150px] mobile:ml-20 laptop:ml-96 laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[265px] tablet:w-[440px] laptop:w-[500px] ">
           <h1 className="-skew-x-12 text-white mobile:text-lg mobile:text-left laptop:text-4xl  tablet:text-3xl   font-GillCondensedB">
             Compartilhe nossos videos{' '}
           </h1>
@@ -372,10 +372,10 @@ function Home() {
         style={{ backgroundImage: `url(${Bgimg})` }}
       >
         <img className="absolute  laptop:w-32 mobile:w-24" src={title} alt="" />
-        <h1 className="absolute mobile:ml-32 mobile:mt-5 text-[#ffda00] font-GillCondensedB laptop:text-5xl laptop:ml-[370px] tablet:ml-[320px] mobile:text-lg tablet:text-3xl text-outline-blue">
+        <h1 className="absolute mobile:ml-32 mobile:mt-5 text-[#ffda00] font-GillCondensedB laptop:text-5xl laptop:ml-[370px] tablet:ml-[220px] mobile:text-lg tablet:text-3xl text-outline-blue">
           Baixe suas fotos aqui!
         </h1>
-        <div className="grid laptop:mt-24 laptop:ml-10 tablet:ml-48 laptop:space-x-3 laptop:p-8 mobile:space-y-2 tablet:space-y-2 mobile:mt-20  mobile:grid-cols-2 mobile:p-2 laptop:grid-cols-3 laptop:grid-rows-3 justify-center items-center mobile:overflow-hidden ">
+        <div className="grid laptop:mt-24 laptop:ml-10 tablet:ml-24 laptop:space-x-3 laptop:p-8 mobile:space-y-2 tablet:space-y-2 mobile:mt-20  mobile:grid-cols-2 mobile:p-2 laptop:grid-cols-3 laptop:grid-rows-3 justify-center items-center mobile:overflow-hidden ">
           <div className="relative bg-[#e30024] laptop:ml-[3px] laptop:mt-[5px] skew-x-12 laptop:p-4 laptop:w-80 mobile:w-[150px] mobile:ml-5 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]">
             <h1 className="absolute laptop:mt-[-40px] skew-y-6 -skew-x-12 laptop:text-7xl mobile:text-3xl mobile:mt-[-15px] text-[#ffda00] font-black hover:mt-[-50px]">
               19
@@ -535,7 +535,7 @@ function Home() {
         </div>
       </div>
       <div className="laptop:flex mobile:flex laptop:justify-center laptop:items-center laptop:h-24 mobile:h-12 w-full bg-[#014d98]  tablet:h-24 ">
-        <h1 className="text-black border-solid font-semibold laptop:text-md laptop:place-items-center laptop:ml-12 laptop:mt-2 tablet:ml-72 tablet:mt-8 mobile:ml-10 mobile:mt-4 mobile:text-sm ">
+        <h1 className="text-black border-solid font-semibold laptop:text-md laptop:place-items-center laptop:ml-12 laptop:mt-2 tablet:ml-48 tablet:mt-8 mobile:ml-10 mobile:mt-4 mobile:text-sm ">
           @Nova Igreja Batista 2024.
         </h1>
         <h3 className="text-sm mobile:mt-4 tablet:mt-8 laptop:mt-2">

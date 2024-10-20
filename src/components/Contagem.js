@@ -38,10 +38,9 @@ const CountdownTimer = () => {
       <h1 className="text-[#ffda00]">Próxima apresentação - 20/10</h1>
       {timeLeft.days !== undefined ? (
         <div className="grid  grid-flow-col border border-full p-3 gap-x-2 items-end laptop:text-3xl text-white rounded-xl font-GillCondensedB">
-          <h2>{timeLeft.days} Dias</h2>
           <h2>{timeLeft.hours} Horas</h2>
           <h2>{timeLeft.minutes} Minutos</h2>
-          <h2>{timeLeft.seconds} </h2>
+          <h2>{timeLeft.seconds} Segundos</h2>
         </div>
       ) : (
         <h2>Evento já começou!</h2>
