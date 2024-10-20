@@ -102,46 +102,44 @@ function Home() {
         <div>
           <a href="https://nibgrandecircular.com/">
             <img
-              className="absolute mobile:w-24 mobile:top-8 mobile:right-[135px] tablet:w-32  tablet:top-1 tablet:right-[270px] laptop:w-[350px] laptop:left-24 laptop:top-8 drop-shadow-[0_20px_20px_rgba(30,10,0,0.55)]"
+              className=" mobile:w-24 mobile:mt-[20px] mobile:ml-[120px] tablet:w-48  tablet:mt-[10px] tablet:ml-[105px] laptop:w-[350px] laptop:ml-[40px] laptop:mt-[50px] drop-shadow-[0_20px_20px_rgba(30,10,0,0.55)]"
               href=""
               src={logo}
               alt=""
             />
           </a>
-          <h1 className="absolute text-white mobile:font-bold mobile:top-[100px] mobile:right-[135px] mobile:text-sm tablet:font-bold tablet:top-[100px] tablet:right-[288px] tablet:text-md laptop:font-bold laptop:text-lg laptop:right-[620px] laptop:top-[295px] font-GillCondensedB drop-shadow-[0_10px_10px_rgba(0,0,0,55)]">
+          <h1 className=" text-white mobile:font-bold mobile:mt-[-20px] mobile:ml-[105px] mobile:text-sm tablet:text-md tablet:font-bold tablet:mt-[-40px] tablet:ml-[140px] tablet:text-md laptop:font-bold laptop:text-2xl laptop:ml-[150px]  w-32 laptop:mt-[-87px] font-GillCondensedB drop-shadow-[0_10px_10px_rgba(0,0,0,55)]">
             APRESENTA:
           </h1>
-        </div>
-        <div className="absolute mobile:top-[410px] tablet:top-[460px] laptop:left-12 laptop:top-96 rounded-lg overflow-hidden laptop:drop-shadow-[0_5px_5px_rgba(1,1,1,1)]">
-          <Contagem />
-        </div>
-        <div>
           <img
-            className="absolute
-                    mobile:w-[350px] mobile:top-32 mobile:right-[20px]
-                    tablet:w-[400px] tablet:right-[130px] tablet:top-24 
-                    laptop:w-[600px] laptop:mr-[100px] laptop:top-20
+            className="
+                    mobile:w-[350px] mobile:mt-[20px] mobile:ml-[-5px] 
+                    tablet:w-[400px] tablet:right-[370px] tablet:top-24 
+                    laptop:w-[600px] laptop:ml-[450px] laptop:mt-[-280px]
                     drop-shadow-[0_20px_20px_rgba(0,0,0,0.85)]"
             src={perso}
             alt=""
           />
           <img
-            className="absolute z-40 drop-shadow-[0_20px_20px_rgba(0,0,0,0.95)]
-                    mobile:w-[250px] mobile:top-[260px] mobile:right-[65px]
-                    tablet:w-[300px] tablet:top-[230px] tablet:right-[170px]
-                    laptop:w-[400px] laptop:top-[290px] laptop:right-48"
+            className="relative drop-shadow-[0_20px_20px_rgba(0,0,0,0.95)]
+                    mobile:w-[220px] mobile:mt-[-50px] mobile:ml-[65px]
+                    tablet:w-[300px] tablet:top-[-20px] tablet:right-[25px]
+                    laptop:w-[400px] laptop:top-[-60px] laptop:ml-[620px]"
             src={title}
             alt=""
           />
           <img
-            className="absolute  
-                    mobile:w-[70px] mobile:ml-[110px] mobile:top-[370px]
-                    tablet:w-[80px] tablet:ml-[140px] tablet:top-[320px] 
-                    laptop:w-[90px] laptop:ml-[395px] laptop:top-[444px]
+            className="
+                    mobile:w-[70px] mobile:ml-[270px] mobile:mt-[-30px]
+                    tablet:w-[80px] tablet:ml-[330px] tablet:mt-[-50px] 
+                    laptop:w-[90px] laptop:ml-[975px] laptop:mt-[-114px]
                     z-50 drop-shadow-[0_20px_20px_rgba(0,0,0,0.85)]"
             src={Titletwo}
             alt=""
           />
+          <div className=" mobile:mt-[25px] w-[290px] laptop:w-[480px] mobile:ml-[40px] tablet:mt-[-10px] laptop:ml-[-25px] laptop:mt-[-110px] rounded-lg overflow-hidden laptop:drop-shadow-[0_5px_5px_rgba(1,1,1,1)]">
+            <Contagem />
+          </div>
         </div>
       </div>
       <div className="relative bg-cover bg-white-300 mobile:h-96 laptop:h-[450px] w-full overflow-hidden ">
