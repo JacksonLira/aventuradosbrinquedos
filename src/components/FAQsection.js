@@ -89,7 +89,7 @@ const FAQSection = () => {
       question:
         'Se o estacionamento lotar eu terei que colocar o meu carro da rua?',
       answer:
-        'Não será necessário, temos um estacionamento em anexo do shopping Cidade Leste que em último caso, usaremos para colocar os carros extras'
+        'Não será necessário, temos um estacionamento em anexo do shopping Cidade Leste que em último caso, usaremos para colocar os carros'
     }
     // Adicione mais perguntas e respostas aqui
   ]

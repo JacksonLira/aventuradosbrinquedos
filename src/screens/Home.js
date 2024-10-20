@@ -102,13 +102,13 @@ function Home() {
         <div>
           <a href="https://nibgrandecircular.com/">
             <img
-              className="absolute mobile:w-24 mobile:top-8 mobile:right-[150px] tablet:w-32  tablet:top-1 tablet:mr-[150px] laptop:w-[350px] laptop:left-24 laptop:top-8 drop-shadow-[0_20px_20px_rgba(30,10,0,0.55)]"
+              className="absolute mobile:w-24 mobile:top-8 mobile:right-[135px] tablet:w-32  tablet:top-1 tablet:right-[270px] laptop:w-[350px] laptop:left-24 laptop:top-8 drop-shadow-[0_20px_20px_rgba(30,10,0,0.55)]"
               href=""
               src={logo}
               alt=""
             />
           </a>
-          <h1 className="absolute text-white mobile:font-bold mobile:top-[100px] mobile:right-[150px] mobile:text-sm tablet:font-bold tablet:top-[100px] tablet:mr-[270px] laptop:font-bold laptop:text-lg laptop:right-[620px] laptop:top-[295px] font-GillCondensedB drop-shadow-[0_10px_10px_rgba(0,0,0,55)]">
+          <h1 className="absolute text-white mobile:font-bold mobile:top-[100px] mobile:right-[135px] mobile:text-sm tablet:font-bold tablet:top-[100px] tablet:right-[288px] tablet:text-md laptop:font-bold laptop:text-lg laptop:right-[620px] laptop:top-[295px] font-GillCondensedB drop-shadow-[0_10px_10px_rgba(0,0,0,55)]">
             APRESENTA:
           </h1>
         </div>
@@ -118,8 +118,8 @@ function Home() {
         <div>
           <img
             className="absolute
-                    mobile:w-[350px] mobile:top-32 mobile:right-9
-                    tablet:w-[400px] tablet:mr-[130px] tablet:top-24 
+                    mobile:w-[350px] mobile:top-32 mobile:right-[20px]
+                    tablet:w-[400px] tablet:right-[130px] tablet:top-24 
                     laptop:w-[600px] laptop:mr-[100px] laptop:top-20
                     drop-shadow-[0_20px_20px_rgba(0,0,0,0.85)]"
             src={perso}
@@ -127,8 +127,8 @@ function Home() {
           />
           <img
             className="absolute z-40 drop-shadow-[0_20px_20px_rgba(0,0,0,0.95)]
-                    mobile:w-[250px] mobile:top-[260px] mobile:right-[75px]
-                    tablet:w-[300px] tablet:top-[230px] tablet:right-[220px]
+                    mobile:w-[250px] mobile:top-[260px] mobile:right-[65px]
+                    tablet:w-[300px] tablet:top-[230px] tablet:right-[170px]
                     laptop:w-[400px] laptop:top-[290px] laptop:right-48"
             src={title}
             alt=""
@@ -136,7 +136,7 @@ function Home() {
           <img
             className="absolute  
                     mobile:w-[70px] mobile:ml-[110px] mobile:top-[370px]
-                    tablet:w-[80px] tablet:ml-[140px] tablet:top-[350px] 
+                    tablet:w-[80px] tablet:ml-[140px] tablet:top-[320px] 
                     laptop:w-[90px] laptop:ml-[395px] laptop:top-[444px]
                     z-50 drop-shadow-[0_20px_20px_rgba(0,0,0,0.85)]"
             src={Titletwo}
@@ -292,7 +292,7 @@ function Home() {
         className="flex bg-cover  h-screen mobile:h-[590px] w-full"
         style={{ backgroundImage: `url(${Bgimg})` }}
       >
-        <div className="grid mobile:mt-2 tablet:ml-[260px] mobile:ml-[80px] laptop:ml-[490px] laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[250px] tablet:w-[240px] laptop:w-[250px] laptop:h-12 mobile:h-12 ">
+        <div className="grid mobile:mt-2 tablet:ml-[210px] mobile:ml-[80px] laptop:ml-[490px] laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[250px] tablet:w-[240px] laptop:w-[250px] laptop:h-12 mobile:h-12 ">
           <h1 className="-skew-x-12 text-white mobile:text-lg mobile:text-center laptop:text-4xl  tablet:text-3xl   font-GillCondensedB">
             Dúvidas?{' '}
           </h1>
@@ -316,7 +316,7 @@ function Home() {
         </a> */}
       </div>
       <div className="relative bg-cover mt-[-20px] bg-[#ffda00] h-[750px] tablet:h-[850px] w-full border-t border-blue-900 border-t-4 rounded-t-[20px] border-b border-blue-900 border-b-4 rounded-b-[20px]">
-        <div className="grid ml-96 mobile:mt-2 tablet:ml-[150px] mobile:ml-20 laptop:ml-96 laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[265px] tablet:w-[440px] laptop:w-[500px] ">
+        <div className="grid  mobile:mt-2 tablet:ml-[130px] mobile:ml-12 laptop:ml-96 laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[265px] tablet:w-[440px] laptop:w-[500px] ">
           <h1 className="-skew-x-12 text-white mobile:text-lg mobile:text-left laptop:text-4xl  tablet:text-3xl   font-GillCondensedB">
             Compartilhe nossos videos{' '}
           </h1>
@@ -326,7 +326,7 @@ function Home() {
             alt=""
           />
         </div>
-        <div className="laptop:h-[610px] mobile:h-[610px]  mobile:p-4 mobile:mt-5 tablet:h-[700px] tablet:mr-10 tablet:mt-5 overflow-hidden overflow-y-auto">
+        <div className="laptop:h-[610px] mobile:h-[610px] mobile:p-4 mobile:mt-5 tablet:h-[700px] tablet:mt-3 overflow-y-auto overflow-hidden">
           <Reels />
         </div>
       </div>
@@ -349,7 +349,7 @@ function Home() {
         <div className="flex flex-cols  space-x-10 laptop:ml-[280px] laptop:mt-20 mobile:ml-[140px] mobile:mt-10 tablet:mt-12  tablet:ml-32">
           <a
             className="grid grid-flow-col gap-x-2 items-end text-2xl text-white"
-            href="https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[latitude]=-3.0495419437079705&dropoff[longitude]=-59.944822777222164&dropoff[nickname]=DESTINATION_NAME"
+            href="https://m.uber.com/ul/?action=setPickup&pickup=my_location&dropoff[latitude]=-3.0495419437079705&dropoff[longitude]=-59.944822777222164&dropoff[nickname]=Nova_Igreja_Batista"
           >
             <img
               className="w-12 hover:bg-white-100 rounded rounded-full"
@@ -380,11 +380,12 @@ function Home() {
             <h1 className="absolute laptop:mt-[-40px] skew-y-6 -skew-x-12 laptop:text-7xl mobile:text-3xl mobile:mt-[-15px] text-[#ffda00] font-black hover:mt-[-50px]">
               19
             </h1>
-            {/* <Link
+            <Link
               to="/gallery/19"
               className="text-white font-black hover:text-blue-700 transition duration-300"
-            > */}
-            <h2 className=" -skew-x-12 font-GillCondensedB ">OUTUBRO</h2>
+            >
+              <h2 className=" -skew-x-12 font-GillCondensedB ">OUTUBRO</h2>
+            </Link>
           </div>
           <div className="relative bg-gray-500 opacity-50 skew-x-12 laptop:p-4 laptop:w-80 mobile:w-[150px] mobile:ml-5 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]">
             <h1 className="absolute laptop:mt-[-40px] skew-y-6 -skew-x-12 laptop:text-7xl mobile:text-3xl mobile:mt-[-15px] text-[#ffda00] font-black hover:mt-[-50px]">
