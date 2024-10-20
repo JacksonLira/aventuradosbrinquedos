@@ -39,7 +39,7 @@ const FAQSection = () => {
       answer: 'Sim, é gratuito, entrada e estacionamento.'
     },
     {
-      question: 'Posso reservar o meu acento?',
+      question: 'Posso reservar o meu assento?',
       answer: 'Infelizmente não, será por ordem de chegada.'
     },
     {
