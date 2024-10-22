@@ -31,7 +31,7 @@ import Reels from '../components/Reels'
 import { Link } from 'react-router-dom'
 // import { FacebookIcon, InstapaperIcon } from 'react-share'
 // eslint-disable-next-line import-helpers/order-imports
-import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube } from 'react-icons/fa'
 
 function Home() {
   const [showModal, setShowModal] = useState(false)
@@ -290,7 +290,7 @@ function Home() {
         className="flex bg-cover  h-screen mobile:h-[590px] w-full"
         style={{ backgroundImage: `url(${Bgimg})` }}
       >
-        <div className="grid mobile:mt-2 tablet:ml-[210px] mobile:ml-[80px] laptop:ml-[490px] laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[250px] tablet:w-[240px] laptop:w-[250px] laptop:h-12 mobile:h-12 ">
+        <div className="grid mobile:mt-2 tablet:ml-[330px] mobile:ml-[80px] laptop:ml-[490px] laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[250px] tablet:w-[240px] laptop:w-[250px] laptop:h-12 mobile:h-12 ">
           <h1 className="-skew-x-12 text-white mobile:text-lg mobile:text-center laptop:text-4xl  tablet:text-3xl   font-GillCondensedB">
             Dúvidas?{' '}
           </h1>
@@ -300,21 +300,21 @@ function Home() {
             alt=""
           />
         </div>
-        <div className="absolute laptop:p-3 mobile:mt-20 mobile:mr-5 laptop:mt-24 laptop:h-96 mobile:h-96 mobile:overflow-y-auto tablet:mt-20 mobile:ml-[7px]  tablet:mr-10  laptop:ml-1  overflow-y-scroll">
+        <div className="absolute laptop:p-3 mobile:mt-20 mobile:mr-2 laptop:mt-24 laptop:h-96 mobile:h-96 mobile:overflow-y-auto tablet:mt-20 mobile:ml-[7px]  tablet:mr-10  laptop:ml-1  overflow-y-scroll">
           <FAQSection />
         </div>
-        {/* <a
-          className="flex flex-cols  space-x-10 laptop:ml-[250px] mobile:ml-[100px] mobile:mt-10 tablet:mt-10 drop-shadow-[0_10px_10px_rgba(0,0,0,10)] overflow-hidden"
-          href="https://web.whatsapp.com/"
+        <a
+          className="flex  items-end laptop:h-12 laptop:w-[280px] tablet:h-[40px] tablet:w-[300px] tablet:mt-[500px] tablet:ml-[-260px] mobile:h-12 mobile:w-[300px] tablet:text-md space-x-3 laptop:mt-[500px] laptop:ml-[-270px] mobile:ml-[-260px] mobile:mt-[480px] tablet:ml-[-50px] drop-shadow-[0_10px_10px_rgba(0,0,0,10)] overflow-hidden"
+          href="https://wa.me/92984590712?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20espet%C3%A1culo%20AS%20AVENTURAS%20DOS%20BRINQUEDOS"
         >
-          <FaWhatsapp size={60} color="#e30024" />
-          <span className="text-[#ffda00] font-GillCondensedB text-3xl mobile:text-md text-outline-blue">
+          <FaWhatsapp size={45} color="#e30024" />
+          <span className="text-[#ffda00] font-GillCondensedB text-3xl mobile:text-md tablet:text-md text-outline-blue">
             Fale Conosco !
           </span>
-        </a> */}
+        </a>
       </div>
       <div className="relative bg-cover mt-[-20px] bg-[#ffda00] h-[750px] tablet:h-[850px] w-full border-t border-blue-900 border-t-4 rounded-t-[20px] border-b border-blue-900 border-b-4 rounded-b-[20px]">
-        <div className="grid  mobile:mt-2 tablet:ml-[130px] mobile:ml-12 laptop:ml-96 laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[265px] tablet:w-[440px] laptop:w-[500px] ">
+        <div className="grid  mobile:mt-2 tablet:ml-[140px] mobile:ml-12 laptop:ml-96 laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[265px] tablet:w-[440px] laptop:w-[500px] ">
           <h1 className="-skew-x-12 text-white mobile:text-lg mobile:text-left laptop:text-4xl  tablet:text-3xl   font-GillCondensedB">
             Compartilhe nossos videos{' '}
           </h1>
@@ -324,7 +324,7 @@ function Home() {
             alt=""
           />
         </div>
-        <div className="laptop:h-[610px] mobile:h-[610px] mobile:p-4 mobile:mt-5 tablet:h-[700px] tablet:mt-3 overflow-y-auto overflow-hidden">
+        <div className="laptop:h-[610px] mobile:h-[610px] mobile:p-4 mobile:mt-5 mobile:ml-3 tablet:h-[700px] tablet:mt-3 overflow-y-auto overflow-hidden">
           <Reels />
         </div>
       </div>

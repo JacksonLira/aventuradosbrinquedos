@@ -3,11 +3,12 @@ import { InstagramEmbed } from 'react-social-media-embed'
 
 const MultipleInstagramEmbeds = () => {
   const instagramUrls = [
-    'https://www.instagram.com/reel/DBRYBJQpbd1/',
-    'https://www.instagram.com/reel/DBOykTAp54A/', // Post 1
-    'https://www.instagram.com/reel/DBMNJpOpKUq/', // Reel 1
-    'https://www.instagram.com/reel/DBHDb8gJC6j/',
-    'https://www.instagram.com/reel/DA6hO-XPsC_/'
+    'https://www.instagram.com/reel/DBZaQLuPx-q/',
+    'https://www.instagram.com/reel/DA6hO-XPsC_/',
+    'https://www.instagram.com/reel/DAjqp_cvlDD/',
+    'https://www.instagram.com/reel/DAmTspEPY7u/',
+    'https://www.instagram.com/reel/DAtTiMZv-1j/',
+    'https://www.instagram.com/reel/DA1sLqYPCUO/'
   ]
 
   return (
