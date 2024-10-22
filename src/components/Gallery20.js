@@ -10,15 +10,85 @@ const ImageGallery = () => {
 
   const images = [
     // Lista de public IDs das imagens armazenadas no Cloudinary
-    'sample',
-    'sample2',
-    'teste/o8njput1iukkf0hing2j',
-    'teste/ngvja6erjp9x3zik04il',
-    'teste/gbqhq15koxrmqcfoem6n',
-    'teste/utkrmtegijgyjqdccxot',
-    'teste/nm2hjilqctq0mn9yjgto',
-    '',
-    ''
+    'IMG_78_mmmr5j',
+    'IMG_77_rxnoda',
+    'IMG_76_bty4jc',
+    'IMG_75_rxhiyz',
+    'IMG_74_ek9ifi',
+    'IMG_73_ehrkzw',
+    'IMG_72_k4a5fm',
+    'IMG_71_gmvnu3',
+    'IMG_70_om3itc',
+    'IMG_69_pdwk9g',
+    'IMG_68_le3n9k',
+    'IMG_67_ii4t4m',
+    'IMG_66_zshici',
+    'IMG_65_qv2dki',
+    'IMG_64_xhpkol',
+    'IMG_63_ivr6rl',
+    'IMG_62_rhiv2b',
+    'IMG_61_bzxc3x',
+    'IMG_60_ckcsto',
+    'IMG_59_xfdo1t',
+    'IMG_58_hl3mhk',
+    'IMG_57_lx9cbh',
+    'IMG_56_o0d1n1',
+    'IMG_55_lgwr8q',
+    'IMG_54_xujklb',
+    'IMG_53_a3nytw',
+    'IMG_52_pwslkw',
+    'IMG_51_grrp3x',
+    'IMG_50_sfwqfj',
+    'IMG_49_bh8ufx',
+    'IMG_48_s5nhzk',
+    'IMG_47_df5ngh',
+    'IMG_46_rkrhgb',
+    'IMG_45_ihd39z',
+    'IMG_44_jbb83f',
+    'IMG_43_drilhn',
+    'IMG_42_e21ybn',
+    'IMG_41_mctvjp',
+    'IMG_40_zasij9',
+    'IMG_39_n5vier',
+    'IMG_38_fwcz9o',
+    'IMG_37_ienprb',
+    'IMG_36_rckxqh',
+    'IMG_35_lem9wj',
+    'IMG_34_lvglmc',
+    'IMG_33_b9aicp',
+    'IMG_32_zq0xqw',
+    'IMG_31_dk2jyh',
+    'IMG_30_ssxtzv',
+    'IMG_29_bq9umv',
+    'IMG_28_u4q6oh',
+    'IMG_27_vxiuff',
+    'IMG_26_ydgwst',
+    'IMG_25_bqtagc',
+    'IMG_24_spffre',
+    'IMG_23_tyj3gc',
+    'IMG_22_dqva4v',
+    'IMG_19_doimlh',
+    'IMG_21_trea70',
+    'IMG_20_h3dywf',
+    'IMG_18_db2x6v',
+    'IMG_17_varxcv',
+    'IMG_16_okebep',
+    'IMG_15_t57bih',
+    'IMG_14_lp7u2o',
+    'IMG_13_tppsuc',
+    'IMG_12_yohr50',
+    'IMG_11_tvnwlw',
+    'IMG_10_yg9ziv',
+    'IMG_9_c2brb5',
+    'IMG_8_ddiydi',
+    'IMG_7_hwi63i',
+    'IMG_6_juamk3',
+    'IMG_5_lu3jxp',
+    'IMG_4_dmnmar',
+    'IMG_3_uvpro1',
+    'IMG_2_e0kttj',
+    'IMG_1_qsetvo'
+
     // Adicione mais imagens conforme necessário
   ]
 
@@ -27,7 +97,7 @@ const ImageGallery = () => {
   }
 
   const handleDownload = async image => {
-    const url = `https://res.cloudinary.com/dstywrq5n/image/upload/${image}.jpg` // URL da imagem original
+    const url = `https://res.cloudinary.com/dstywrq5n/image/upload/v1729557613/${image}.jpg` // URL da imagem original
 
     try {
       const response = await fetch(url)
@@ -62,11 +132,6 @@ const ImageGallery = () => {
         </Link>
       </div>
       <div>
-        <img
-          className="absolute bg-fixed opacity-60 top-48 right-56 w-[700px]"
-          src={Logo}
-          alt=""
-        />
         <CloudinaryContext cloudName="dstywrq5n">
           <div className="p-10 grid  mobile:grid-cols-2 tablet:grid-cols-3 laptop:grid-cols-4 gap-4">
             {images.map((image, index) => (
