@@ -290,7 +290,7 @@ function Home() {
         className="flex bg-cover  h-screen mobile:h-[590px] w-full"
         style={{ backgroundImage: `url(${Bgimg})` }}
       >
-        <div className="grid mobile:mt-2 tablet:ml-[330px] mobile:ml-[80px] laptop:ml-[490px] laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[250px] tablet:w-[240px] laptop:w-[250px] laptop:h-12 mobile:h-12 ">
+        <div className="grid mobile:mt-2 tablet:ml-[270px] mobile:ml-[80px] laptop:ml-[490px] laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[250px] tablet:w-[240px] laptop:w-[250px] laptop:h-12 mobile:h-12 ">
           <h1 className="-skew-x-12 text-white mobile:text-lg mobile:text-center laptop:text-4xl  tablet:text-3xl   font-GillCondensedB">
             Dúvidas?{' '}
           </h1>
@@ -304,7 +304,7 @@ function Home() {
           <FAQSection />
         </div>
         <a
-          className="flex  items-end laptop:h-12 laptop:w-[280px] tablet:h-[40px] tablet:w-[300px] tablet:mt-[500px] tablet:ml-[-260px] mobile:h-12 mobile:w-[300px] tablet:text-md space-x-3 laptop:mt-[500px] laptop:ml-[-270px] mobile:ml-[-260px] mobile:mt-[480px] tablet:ml-[-50px] drop-shadow-[0_10px_10px_rgba(0,0,0,10)] overflow-hidden"
+          className="flex  items-end laptop:h-12 laptop:w-[280px] tablet:h-[40px] tablet:w-[300px] tablet:mt-[500px] tablet:ml-[-250px] mobile:h-12 mobile:w-[300px] tablet:text-md space-x-3 laptop:mt-[500px] laptop:ml-[-270px] mobile:ml-[-260px] mobile:mt-[480px] tablet:ml-[-50px] drop-shadow-[0_10px_10px_rgba(0,0,0,10)] overflow-hidden"
           href="https://wa.me/92984590712?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20espet%C3%A1culo%20AS%20AVENTURAS%20DOS%20BRINQUEDOS"
         >
           <FaWhatsapp size={45} color="#e30024" />
@@ -396,15 +396,16 @@ function Home() {
               <h2 className=" -skew-x-12 font-GillCondensedB">OUTUBRO</h2>
             </Link>
           </div>
-          <div className="relative bg-gray-500 opacity-50 skew-x-12 laptop:p-4 laptop:w-80 mobile:w-[150px] mobile:ml-5 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]">
+          <div className="relative bg-[#e30024] skew-x-12 laptop:p-4 laptop:w-80 mobile:w-[150px] mobile:ml-5 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]">
             <h1 className="absolute laptop:mt-[-40px] skew-y-6 -skew-x-12 laptop:text-7xl mobile:text-3xl mobile:mt-[-15px] text-[#ffda00] font-black hover:mt-[-50px]">
               21
             </h1>
-            {/* <Link
+            <Link
               to="/gallery/21"
               className="text-white font-black hover:text-blue-700 transition duration-300"
-            > */}
-            <h2 className=" -skew-x-12 font-GillCondensedB">OUTUBRO</h2>
+            >
+              <h2 className=" -skew-x-12 font-GillCondensedB">OUTUBRO</h2>
+            </Link>
           </div>
           <div className="relative bg-gray-500 opacity-50 skew-x-12 laptop:p-4 laptop:w-80 mobile:w-[150px] mobile:ml-5 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]">
             <h1 className="absolute laptop:mt-[-40px] skew-y-6 -skew-x-12 laptop:text-7xl mobile:text-3xl mobile:mt-[-15px] text-[#ffda00] font-black hover:mt-[-50px]">

@@ -10,15 +10,64 @@ const ImageGallery = () => {
 
   const images = [
     // Lista de public IDs das imagens armazenadas no Cloudinary
-    'sample',
-    'sample2',
-    'teste/o8njput1iukkf0hing2j',
-    'teste/ngvja6erjp9x3zik04il',
-    'teste/gbqhq15koxrmqcfoem6n',
-    'teste/utkrmtegijgyjqdccxot',
-    'teste/nm2hjilqctq0mn9yjgto',
-    '',
-    ''
+    'IMG_0551_ywzrze',
+    'IMG_0539_kyfcf1',
+    'IMG_0549_gap2z6',
+    'IMG_0547_xo5qwq',
+    'IMG_0548_khg4qn',
+    'IMG_0535_aw2nvh',
+    'IMG_0545_fahxmg',
+    'IMG_0542_tyltlb',
+    'IMG_0537_ofdjht',
+    'IMG_0536_ucowqo',
+    'IMG_0544_uj35gv',
+    'IMG_0546_amlfv4',
+    'IMG_0534_rztw3d',
+    'IMG_0541_mwk7iq',
+    'IMG_0540_lafeok',
+    'IMG_0543_abo7re',
+    'IMG_0532_necxna',
+    'IMG_0530_qwknci',
+    'IMG_0533_d9tvl0',
+    'IMG_0529_inpnz2',
+    'IMG_0531_pjnua0',
+    'IMG_0525_fsyvgm',
+    'IMG_0527_nvsgjn',
+    'IMG_0526_wylvsf',
+    'IMG_0528_ooptwg',
+    'IMG_0523_cyiofv',
+    'IMG_0524_jffofv',
+    'IMG_0522_hcc7fb',
+    'IMG_0519_kznpdy',
+    'IMG_0520_fmxhjt',
+    'IMG_0521_pjqltl',
+    'IMG_0514_mspzms',
+    'IMG_0509_sdkiqj',
+    'IMG_0517_e9wxnn',
+    'IMG_0515_m6atra',
+    'IMG_0516_kyidlf',
+    'IMG_0518_uywulf',
+    'IMG_0513_h0cobd',
+    'IMG_0511_ee8pdw',
+    'IMG_0512_rrzjsm',
+    'IMG_0510_oiweye',
+    'IMG_0508_orin8b',
+    'IMG_0507_wjzizo',
+    'IMG_0506_k4aqwd',
+    'IMG_0502_pihv2i',
+    'IMG_0503_v35cun',
+    'IMG_0495_pplogd',
+    'IMG_0505_bw4qbh',
+    'IMG_0498_afumhj',
+    'IMG_0497_mdzfm0',
+    'IMG_0501_x2gqhd',
+    'IMG_0499_lja1ah',
+    'IMG_0504_q1e1hy',
+    'IMG_0500_rldatk',
+    'IMG_0496_evbcoe',
+    'IMG_0492_lacjun',
+    'IMG_0494_oge5bb',
+    'IMG_0493_ckdvq5'
     // Adicione mais imagens conforme necessário
   ]
 
@@ -27,7 +76,7 @@ const ImageGallery = () => {
   }
 
   const handleDownload = async image => {
-    const url = `https://res.cloudinary.com/dstywrq5n/image/upload/${image}.jpg` // URL da imagem original
+    const url = `https://res.cloudinary.com/dstywrq5n/image/upload/v1729638679/${image}.jpg` // URL da imagem original
 
     try {
       const response = await fetch(url)
@@ -62,11 +111,6 @@ const ImageGallery = () => {
         </Link>
       </div>
       <div>
-        <img
-          className="absolute bg-fixed opacity-60 top-48 right-56 w-[700px]"
-          src={Logo}
-          alt=""
-        />
         <CloudinaryContext cloudName="dstywrq5n">
           <div className="p-10 grid  mobile:grid-cols-2 tablet:grid-cols-3 laptop:grid-cols-4 gap-4">
             {images.map((image, index) => (
