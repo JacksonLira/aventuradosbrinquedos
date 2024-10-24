@@ -411,15 +411,16 @@ function Home() {
               <h2 className=" -skew-x-12 font-GillCondensedB">OUTUBRO</h2>
             </Link>
           </div>
-          <div className="relative bg-gray-500 opacity-50 skew-x-12 laptop:p-4 laptop:w-80 mobile:w-[150px] mobile:ml-5 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]">
+          <div className="relative bg-[#e30024] skew-x-12 laptop:p-4 laptop:w-80 mobile:w-[150px] mobile:ml-5 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]">
             <h1 className="absolute laptop:mt-[-40px] skew-y-6 -skew-x-12 laptop:text-7xl mobile:text-3xl mobile:mt-[-15px] text-[#ffda00] font-black hover:mt-[-50px]">
               22
             </h1>
-            {/* <Link
+            <Link
               to="/gallery/22"
               className="text-white font-black hover:text-blue-700 transition duration-300"
-            > */}
-            <h2 className=" -skew-x-12 font-GillCondensedB">OUTUBRO</h2>
+            >
+              <h2 className=" -skew-x-12 font-GillCondensedB">OUTUBRO</h2>
+            </Link>
           </div>
           <div className="relative bg-gray-500 opacity-50 skew-x-12 laptop:p-4 laptop:w-80 mobile:w-[150px] mobile:ml-5 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]">
             <h1 className="absolute laptop:mt-[-40px] skew-y-6 -skew-x-12 laptop:text-7xl mobile:text-3xl mobile:mt-[-15px] text-[#ffda00] font-black hover:mt-[-50px]">
