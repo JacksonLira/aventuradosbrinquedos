@@ -295,16 +295,16 @@ function Home() {
             Dúvidas?{' '}
           </h1>
           <img
-            className="absolute -skew-x-12 mobile:ml-[190px] mobile:w-[80px] tablet:w-[100px] mobile:mt-[-18px]  tablet:ml-[180px] tablet:w-[80px] tablet:mt-[-18px]  laptop:w-24 laptop:ml-[177px] laptop:mt-[-33px]"
+            className="absolute -skew-x-12 mobile:ml-[190px] mobile:w-[80px] tablet:w-[100px] mobile:mt-[-18px]  tablet:ml-[170px] tablet:w-[80px] tablet:mt-[-18px]  laptop:w-24 laptop:ml-[177px] laptop:mt-[-33px]"
             src={Jessy}
             alt=""
           />
         </div>
-        <div className="rounded rounded-2 mobile:mt-[90px] mobile:ml-[-300px] mobile:h-[380px] mobile:w-[420px] tablet:w-[750px] tablet:ml-[-465px] laptop:ml-[-710px] laptop:w-[1150px] overflow-y-auto">
+        <div className="rounded rounded-2 mobile:mt-[90px] mobile:ml-[-300px] mobile:h-[380px] mobile:w-[420px] tablet:w-[750px] tablet:ml-[-510px] laptop:ml-[-710px] laptop:w-[1150px] overflow-y-auto">
           <FAQSection />
         </div>
         <a
-          className="flex  items-end hover:opacity-85 laptop:h-12 laptop:w-[300px] tablet:h-[40px] tablet:w-[300px] tablet:mt-[510px] tablet:ml-[-480px] mobile:h-12 mobile:w-[300px] tablet:text-md space-x-3 laptop:mt-[500px] laptop:ml-[-710px] mobile:ml-[-260px] mobile:mt-[490px] tablet:ml-[-50px] drop-shadow-[0_10px_10px_rgba(0,0,0,10)] overflow-hidden"
+          className="flex  items-end hover:opacity-85 laptop:h-12 laptop:w-[300px] tablet:h-[40px] tablet:w-[300px] tablet:mt-[500px] tablet:ml-[-490px] mobile:h-12 mobile:w-[300px] tablet:text-md space-x-3 laptop:mt-[500px] laptop:ml-[-710px] mobile:ml-[-260px] mobile:mt-[490px] tablet:ml-[-50px] drop-shadow-[0_10px_10px_rgba(0,0,0,10)] overflow-hidden"
           href="https://wa.me/92984590712?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20espet%C3%A1culo%20AS%20AVENTURAS%20DOS%20BRINQUEDOS"
         >
           <FaWhatsapp
