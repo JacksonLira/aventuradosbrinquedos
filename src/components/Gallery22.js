@@ -2,24 +2,49 @@ import { CloudinaryContext, Image } from 'cloudinary-react'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import Logo from '../assets/_MarcaMutante NibGC ToyStory.png'
 import Imgbg from '../assets/toy-story-cloud.jpg'
 
 const ImageGallery = () => {
   const [fullscreenImage, setFullscreenImage] = useState(null) // Para controlar o fullscreen
 
   const images = [
-    // Lista de public IDs das imagens armazenadas no Cloudinary
-    'sample',
-    'sample2',
-    'teste/o8njput1iukkf0hing2j',
-    'teste/ngvja6erjp9x3zik04il',
-    'teste/gbqhq15koxrmqcfoem6n',
-    'teste/utkrmtegijgyjqdccxot',
-    'teste/nm2hjilqctq0mn9yjgto',
-    '',
-    ''
-    // Adicione mais imagens conforme necessário
+    'IMG_0780_dojbdz',
+    'IMG_0775_ie4ocz',
+    'IMG_0777_jldpde',
+    'IMG_0779_xt8cuv',
+    'IMG_0778_cdpbhd',
+    'IMG_0771_ttnoam',
+    'IMG_0776_ewh55f',
+    'IMG_0755_bs0iay',
+    'IMG_0754_cztrvb',
+    'IMG_0774_b72aod',
+    'IMG_0773_dpibnq',
+    'IMG_0772_i7pnxf',
+    'IMG_0770_zmkqqc',
+    'IMG_0769_gypqta',
+    'IMG_0753_kjzqtm',
+    'IMG_0763_stpdga',
+    'IMG_0750_jarkcj',
+    'IMG_0751_rkwzxl',
+    'IMG_0752_adq1ox',
+    'IMG_0765_sjfgyr',
+    'IMG_0768_pqi8gn',
+    'IMG_0766_oet2cx',
+    'IMG_0764_wfcihl',
+    'IMG_0749_wh1fha',
+    'IMG_0761_jbew3k',
+    'IMG_0762_vgviac',
+    'IMG_0748_sifae0',
+    'IMG_0748_sifae0',
+    'IMG_0760_bvxhra',
+    'IMG_0758_yvv3d2',
+    'IMG_0747_vgsyop',
+    'IMG_0745_d8ekyk',
+    'IMG_0756_txfduj',
+    'IMG_0746_ctqriq',
+    'IMG_0744_arwrau',
+    'IMG_0744_arwrau',
+    'IMG_0743_lh6yg6'
   ]
 
   const handleFullscreen = image => {
@@ -27,7 +52,7 @@ const ImageGallery = () => {
   }
 
   const handleDownload = async image => {
-    const url = `https://res.cloudinary.com/dstywrq5n/image/upload/${image}.jpg` // URL da imagem original
+    const url = `https://res.cloudinary.com/dstywrq5n/image/upload/v1729727647/${image}.jpg` // URL da imagem original
 
     try {
       const response = await fetch(url)
@@ -62,11 +87,6 @@ const ImageGallery = () => {
         </Link>
       </div>
       <div>
-        <img
-          className="absolute bg-fixed opacity-60 top-48 right-56 w-[700px]"
-          src={Logo}
-          alt=""
-        />
         <CloudinaryContext cloudName="dstywrq5n">
           <div className="p-10 grid  mobile:grid-cols-2 tablet:grid-cols-3 laptop:grid-cols-4 gap-4">
             {images.map((image, index) => (

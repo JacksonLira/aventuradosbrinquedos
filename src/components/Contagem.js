@@ -7,7 +7,7 @@ const CountdownTimer = () => {
 
   useEffect(() => {
     // Defina a data e hora de destino usando DateTime.fromISO
-    const targetDate = DateTime.fromISO('2024-10-23T18:30:00', {
+    const targetDate = DateTime.fromISO('2024-10-24T18:30:00', {
       zone: 'America/Manaus'
     })
 
@@ -41,7 +41,7 @@ const CountdownTimer = () => {
 
   return (
     <div className=" -skew-x-12 font-GillCondensedB laptop:text-3xl ">
-      <h1 className="text-[#ffda00]">Contagem Regressiva</h1>
+      <h1 className="text-[#ffda00]">Próxima apresentação 🤠: 24/10</h1>
       {!finished ? (
         <p
           className="grid  grid-flow-col border border-full p-4 gap-x-2 items-end 

@@ -290,31 +290,35 @@ function Home() {
         className="flex bg-cover  h-screen mobile:h-[590px] w-full"
         style={{ backgroundImage: `url(${Bgimg})` }}
       >
-        <div className="grid mobile:mt-2 tablet:ml-[270px] mobile:ml-[80px] laptop:ml-[490px] laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[250px] tablet:w-[240px] laptop:w-[250px] laptop:h-12 mobile:h-12 ">
+        <div className="grid mobile:mt-2 tablet:ml-[290px] mobile:ml-[80px] laptop:ml-[490px] laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[250px] tablet:w-[240px] laptop:w-[250px] laptop:h-12 mobile:h-12 ">
           <h1 className="-skew-x-12 text-white mobile:text-lg mobile:text-center laptop:text-4xl  tablet:text-3xl   font-GillCondensedB">
             Dúvidas?{' '}
           </h1>
           <img
-            className="absolute -skew-x-12 mobile:ml-[190px] mobile:w-[80px] tablet:w-[100px] mobile:mt-[-18px]  tablet:ml-[170px] tablet:w-[80px] tablet:mt-[-18px]  laptop:w-24 laptop:ml-[177px] laptop:mt-[-33px]"
+            className="absolute -skew-x-12 mobile:ml-[190px] mobile:w-[80px] tablet:w-[100px] mobile:mt-[-18px]  tablet:ml-[180px] tablet:w-[80px] tablet:mt-[-18px]  laptop:w-24 laptop:ml-[177px] laptop:mt-[-33px]"
             src={Jessy}
             alt=""
           />
         </div>
-        <div className="absolute laptop:p-3 mobile:mt-20 mobile:mr-2 laptop:mt-24 laptop:h-96 mobile:h-96 mobile:overflow-y-auto tablet:mt-20 mobile:ml-[7px]  tablet:mr-10  laptop:ml-1  overflow-y-scroll">
+        <div className="rounded rounded-2 mobile:mt-[90px] mobile:ml-[-300px] mobile:h-[380px] mobile:w-[420px] tablet:w-[750px] tablet:ml-[-465px] laptop:ml-[-710px] laptop:w-[1150px] overflow-y-auto">
           <FAQSection />
         </div>
         <a
-          className="flex  items-end laptop:h-12 laptop:w-[280px] tablet:h-[40px] tablet:w-[300px] tablet:mt-[500px] tablet:ml-[-250px] mobile:h-12 mobile:w-[300px] tablet:text-md space-x-3 laptop:mt-[500px] laptop:ml-[-270px] mobile:ml-[-260px] mobile:mt-[480px] tablet:ml-[-50px] drop-shadow-[0_10px_10px_rgba(0,0,0,10)] overflow-hidden"
+          className="flex  items-end hover:opacity-85 laptop:h-12 laptop:w-[300px] tablet:h-[40px] tablet:w-[300px] tablet:mt-[510px] tablet:ml-[-480px] mobile:h-12 mobile:w-[300px] tablet:text-md space-x-3 laptop:mt-[500px] laptop:ml-[-710px] mobile:ml-[-260px] mobile:mt-[490px] tablet:ml-[-50px] drop-shadow-[0_10px_10px_rgba(0,0,0,10)] overflow-hidden"
           href="https://wa.me/92984590712?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20espet%C3%A1culo%20AS%20AVENTURAS%20DOS%20BRINQUEDOS"
         >
-          <FaWhatsapp size={45} color="#e30024" />
-          <span className="text-[#ffda00] font-GillCondensedB text-3xl mobile:text-md tablet:text-md text-outline-blue">
+          <FaWhatsapp
+            className="bg-[#ffda00] rounded rounded-full"
+            size={45}
+            color="#e30024"
+          />
+          <span className="text-[#ffda00] font-GillCondensedB laptop:text-4xl mobile:text-md tablet:text-xl text-outline-blue">
             Fale Conosco !
           </span>
         </a>
       </div>
       <div className="relative bg-cover mt-[-20px] bg-[#ffda00] h-[750px] tablet:h-[850px] w-full border-t border-blue-900 border-t-4 rounded-t-[20px] border-b border-blue-900 border-b-4 rounded-b-[20px]">
-        <div className="grid  mobile:mt-2 tablet:ml-[140px] mobile:ml-12 laptop:ml-96 laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[265px] tablet:w-[440px] laptop:w-[500px] ">
+        <div className="grid  mobile:mt-2 tablet:ml-[180px] mobile:ml-12 laptop:ml-96 laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[265px] tablet:w-[440px] laptop:w-[500px] ">
           <h1 className="-skew-x-12 text-white mobile:text-lg mobile:text-left laptop:text-4xl  tablet:text-3xl   font-GillCondensedB">
             Compartilhe nossos videos{' '}
           </h1>
