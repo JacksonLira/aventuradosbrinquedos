@@ -2,7 +2,6 @@ import { CloudinaryContext, Image } from 'cloudinary-react'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import Logo from '../assets/_MarcaMutante NibGC ToyStory.png'
 import Imgbg from '../assets/toy-story-cloud.jpg'
 
 const ImageGallery = () => {
@@ -10,15 +9,58 @@ const ImageGallery = () => {
 
   const images = [
     // Lista de public IDs das imagens armazenadas no Cloudinary
-    'sample',
-    'sample2',
-    'teste/o8njput1iukkf0hing2j',
-    'teste/ngvja6erjp9x3zik04il',
-    'teste/gbqhq15koxrmqcfoem6n',
-    'teste/utkrmtegijgyjqdccxot',
-    'teste/nm2hjilqctq0mn9yjgto',
-    '',
-    ''
+    'IMG_0837_p2cbnp',
+    'IMG_0835_m7q51x',
+    'IMG_0834_tt2agy',
+    'IMG_0833_u4gmpu',
+    'IMG_0832_u1rvgm',
+    'IMG_0831_lukhy1',
+    'IMG_0830_n86g2m',
+    'IMG_0828_qkqkdd',
+    'IMG_0829_a9xxsf',
+    'IMG_0827_dqhvqw',
+    'IMG_0826_xbi3mp',
+    'IMG_0825_oqfkov',
+    'IMG_0822_unychv',
+    'IMG_0824_atlk4u',
+    'IMG_0823_gvxwdr',
+    'IMG_0821_zvzvdh',
+    'IMG_0820_ikefvk',
+    'IMG_0819_mr6mnq',
+    'IMG_0817_xrhvjv',
+    'IMG_0818_te1g5g',
+    'IMG_0816_daqc74',
+    'IMG_0815_ogsd45',
+    'IMG_0814_tiuupv',
+    'IMG_0813_ejw3yc',
+    'IMG_0812_fryxhb',
+    'IMG_0811_dgfnnh',
+    'IMG_0810_atohtz',
+    'IMG_0808_fo723w',
+    'IMG_0807_fe6zle',
+    'IMG_0809_jke2w1',
+    'IMG_0806_ant4ko',
+    'IMG_0805_walu4l',
+    'IMG_0801_q9dek7',
+    'IMG_0800_u1hl8b',
+    'IMG_0804_mpbkbe',
+    'IMG_0799_pk0th0',
+    'IMG_0803_px3dhu',
+    'IMG_0802_oy5iew',
+    'IMG_0798_ekyvqo',
+    'IMG_0795_ksyevb',
+    'IMG_0797_rm0i8o',
+    'IMG_0794_oqepxq',
+    'IMG_0793_me8fsd',
+    'IMG_0792_j6ojz5',
+    'IMG_0791_dm1ror',
+    'IMG_0790_zlbrlw',
+    'IMG_0789_riaiw7',
+    'IMG_0788_lxacxu',
+    'IMG_0787_d2bwdu',
+    'IMG_0785_wk4n02',
+    'IMG_0786_vnyscm',
+    'IMG_0784_tmkmuv'
     // Adicione mais imagens conforme necessário
   ]
 
@@ -27,7 +69,7 @@ const ImageGallery = () => {
   }
 
   const handleDownload = async image => {
-    const url = `https://res.cloudinary.com/dstywrq5n/image/upload/${image}.jpg` // URL da imagem original
+    const url = `https://res.cloudinary.com/dstywrq5n/image/upload/v1729813826/${image}.jpg` // URL da imagem original
 
     try {
       const response = await fetch(url)
@@ -62,11 +104,6 @@ const ImageGallery = () => {
         </Link>
       </div>
       <div>
-        <img
-          className="absolute bg-fixed opacity-60 top-48 right-56 w-[700px]"
-          src={Logo}
-          alt=""
-        />
         <CloudinaryContext cloudName="dstywrq5n">
           <div className="p-10 grid  mobile:grid-cols-2 tablet:grid-cols-3 laptop:grid-cols-4 gap-4">
             {images.map((image, index) => (

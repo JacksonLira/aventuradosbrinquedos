@@ -7,7 +7,7 @@ const CountdownTimer = () => {
 
   useEffect(() => {
     // Defina a data e hora de destino usando DateTime.fromISO
-    const targetDate = DateTime.fromISO('2024-10-24T18:30:00', {
+    const targetDate = DateTime.fromISO('2024-10-25T18:30:00', {
       zone: 'America/Manaus'
     })
 
