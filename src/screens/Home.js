@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import Slider from 'react-slick'
 
 import 'slick-carousel/slick/slick.css'
@@ -12,6 +12,7 @@ import Bigreja from '../assets/bigreja.png'
 import Buzzy from '../assets/Buzz_Lightyear.png'
 import ImgIgreja from '../assets/imgigreja.png'
 import Jessy from '../assets/jesspng.png'
+import Nuvem from '../assets/nuvemm.webp'
 import perso from '../assets/personagens.png'
 import Rex from '../assets/Rex.png'
 import Sid from '../assets/Sid-Phillips.png'
@@ -26,6 +27,7 @@ import Contagem from '../components/Contagem'
 import FAQSection from '../components/FAQsection'
 import Modal from '../components/Modal'
 import Reels from '../components/Reels'
+import Video from '../video/nuvem.mp4'
 
 // eslint-disable-next-line import-helpers/order-imports, no-unused-vars
 import { Link } from 'react-router-dom'
@@ -34,6 +36,16 @@ import { Link } from 'react-router-dom'
 import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube } from 'react-icons/fa'
 
 function Home() {
+  const videoRef = useRef(null)
+
+  useEffect(() => {
+    // Garante que o autoplay funcione em dispositivos móveis
+    if (videoRef.current) {
+      videoRef.current.play().catch(() => {
+        console.log('Autoplay foi bloqueado')
+      })
+    }
+  }, [])
   const [showModal, setShowModal] = useState(false)
   const [videoUrl, setVideoUrl] = useState('')
 
@@ -85,13 +97,18 @@ function Home() {
 
   return (
     <div className="App">
-      <div
-        className="flex justify-center items-center bg-cover laptop:h-screen tablet:h-[600px] mobile:h-[510px] w-full overflow-hidden"
-        style={{ backgroundImage: `url(${Bgimg})` }}
-      >
-        {/* <div className="absolute  bg-fixed bg-cover object-cover z-0 w-full h-">
-          <video autoPlay loop muted>
-            <source src={Video} type="video/mp4" />
+      <div className="bg-animation flex justify-center items-center bg-cover laptop:h-screen tablet:h-[600px] mobile:h-[510px] w-full overflow-hidden">
+        {/* <div className="fixed inset-0 w-full h-full overflow-hidden z-0">
+          <video
+            ref={videoRef}
+            className="absolute inset-0 min-w-full h-[510px] object-cover"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source src="/path/to/your-video.mp4" type="video/mp4" />
+            Seu navegador não suporta o vídeo.
           </video>
         </div> */}
         <div className="absolute bg-cover bg-blue-800 bg-opacity-50 w-full top-0 overflow-hidden">
@@ -116,7 +133,7 @@ function Home() {
                     mobile:w-[350px] mobile:mt-[20px] mobile:ml-[-5px] 
                     tablet:w-[400px] tablet:right-[370px] tablet:top-24 
                     laptop:w-[600px] laptop:ml-[450px] laptop:mt-[-280px]
-                    drop-shadow-[0_20px_20px_rgba(0,0,0,0.85)]"
+                    drop-shadow-[0_20px_20px_rgba(0,0,0,0.85)] float"
             src={perso}
             alt=""
           />
@@ -142,12 +159,12 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="relative bg-cover bg-white-300 mobile:h-96 laptop:h-[450px] w-full overflow-hidden ">
+      <div className="relative bg-cover bg-white-300 mobile:h-96 laptop:h-[450px] w-full overflow-hidden">
         <h3 className="text-2xl mobile:text-sm mt-10 mobile:mt-5 tablet:text-lg laptop:text-3xl laptop:mb-10 font-black font-GillBold">
           {' '}
           CONHEÇA OS NOSSOS PERSONAGENS{' '}
         </h3>
-        <Slider className="mx-2 mobile:mt-2" {...settings}>
+        <Slider className="mx-2 mobile:mt-2 z-10" {...settings}>
           <div className="relative bg-yellow-300  mobile:h-72   max-w-xs  overflow-hidden rounded-2xl shadow-lg group border border-blue-900 laptop:hover:border-black border-4">
             <img
               className="laptop:h-72 tablet:w-96 tablet:h-72 laptop:w-96 mobile:w-[170px] mobile:h-[130px] transition-transform group-hover:scale-110 duration-200 inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent"
@@ -235,11 +252,11 @@ function Home() {
         </Slider>
       </div>
       <div
-        className="flex justify-center items-center bg-cover mobile:h-24 tablet:h-52 laptop:h-72 w-full overflow-hidden"
+        className="flex justify-center items-center bg-cover mobile:h-24 tablet:h-52 laptop:h-72 w-full z-10 overflow-hidden"
         style={{ backgroundImage: `url(${Banner})` }}
       >
         <img
-          className="mobile:w-24 tablet:w-48 tablet:mt-[-70px] laptop:w-56 laptop:mt-[-50px] "
+          className="mobile:w-24 tablet:w-48 tablet:mt-[-70px] laptop:w-56 laptop:mt-[-50px]"
           src={logo}
           alt=""
         />
@@ -286,36 +303,35 @@ function Home() {
         </div>
       </div>{' '} */}
 
-      <div
-        className="flex bg-cover  h-screen mobile:h-[590px] w-full"
-        style={{ backgroundImage: `url(${Bgimg})` }}
-      >
-        <div className="grid mobile:mt-2 tablet:ml-[290px] mobile:ml-[80px] laptop:ml-[490px] laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[250px] tablet:w-[240px] laptop:w-[250px] laptop:h-12 mobile:h-12 ">
-          <h1 className="-skew-x-12 text-white mobile:text-lg mobile:text-center laptop:text-4xl  tablet:text-3xl   font-GillCondensedB">
-            Dúvidas?{' '}
-          </h1>
-          <img
-            className="absolute -skew-x-12 mobile:ml-[190px] mobile:w-[80px] tablet:w-[100px] mobile:mt-[-18px]  tablet:ml-[170px] tablet:w-[80px] tablet:mt-[-18px]  laptop:w-24 laptop:ml-[177px] laptop:mt-[-33px]"
-            src={Jessy}
-            alt=""
-          />
+      <div className="flex h-screen mobile:h-[590px] w-full bg-animation overflow-hidden">
+        <div>
+          <div className="grid mobile:mt-5 tablet:ml-[290px] mobile:ml-[135px] laptop:ml-[490px] laptop:mt-10 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[130px] tablet:w-[240px] laptop:w-[250px] laptop:h-12 mobile:h-12">
+            <h1 className="-skew-x-12 text-white mobile:text-lg mobile:text-center laptop:text-4xl  tablet:text-3xl   font-GillCondensedB">
+              Dúvidas?{' '}
+            </h1>
+            <img
+              className="absolute -skew-x-12 mobile:ml-[90px] mobile:w-[80px] tablet:w-[100px] mobile:mt-[-18px]  tablet:ml-[170px] tablet:w-[80px] tablet:mt-[-18px]  laptop:w-24 laptop:ml-[177px] laptop:mt-[-33px] z-20"
+              src={Jessy}
+              alt=""
+            />
+          </div>
+          <div className="flex rounded rounded-2 mobile:mt-[30px] mobile:ml-[11px] mobile:h-[380px] mobile:w-[360px] tablet:w-[750px] tablet:mt-[25px] tablet:ml-[20px] laptop:ml-[45px] laptop:mt-[30px] laptop:w-[1150px] overflow-y-auto overflow-hidden">
+            <FAQSection />
+          </div>
+          <a
+            className="flex  items-end hover:opacity-85 laptop:h-12 laptop:w-[300px] tablet:h-[45px] tablet:w-[300px] tablet:mt-[30px] tablet:ml-[300px] mobile:h-12 mobile:w-[300px] tablet:text-md space-x-3 laptop:mt-[20px] laptop:ml-[460px] mobile:ml-[120px] mobile:mt-[25px] drop-shadow-[0_10px_10px_rgba(0,0,0,10)] overflow-hidden"
+            href="https://wa.me/92984590712?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20espet%C3%A1culo%20AS%20AVENTURAS%20DOS%20BRINQUEDOS"
+          >
+            <FaWhatsapp
+              className="bg-[#ffda00] rounded rounded-full"
+              size={45}
+              color="#e30024"
+            />
+            <span className="text-[#ffda00] font-GillCondensedB laptop:text-4xl mobile:text-md tablet:text-xl text-outline-blue overflow-hidden">
+              Fale Conosco !
+            </span>
+          </a>
         </div>
-        <div className="rounded rounded-2 mobile:mt-[90px] mobile:ml-[-300px] mobile:h-[380px] mobile:w-[420px] tablet:w-[750px] tablet:ml-[-510px] laptop:ml-[-710px] laptop:w-[1150px] overflow-y-auto">
-          <FAQSection />
-        </div>
-        <a
-          className="flex  items-end hover:opacity-85 laptop:h-12 laptop:w-[300px] tablet:h-[40px] tablet:w-[300px] tablet:mt-[500px] tablet:ml-[-450px] mobile:h-12 mobile:w-[300px] tablet:text-md space-x-3 laptop:mt-[500px] laptop:ml-[-710px] mobile:ml-[-260px] mobile:mt-[490px] tablet:ml-[-50px] drop-shadow-[0_10px_10px_rgba(0,0,0,10)] overflow-hidden"
-          href="https://wa.me/92984590712?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20espet%C3%A1culo%20AS%20AVENTURAS%20DOS%20BRINQUEDOS"
-        >
-          <FaWhatsapp
-            className="bg-[#ffda00] rounded rounded-full"
-            size={45}
-            color="#e30024"
-          />
-          <span className="text-[#ffda00] font-GillCondensedB laptop:text-4xl mobile:text-md tablet:text-xl text-outline-blue">
-            Fale Conosco !
-          </span>
-        </a>
       </div>
       <div className="relative bg-cover mt-[-20px] bg-[#ffda00] h-[750px] tablet:h-[850px] w-full border-t border-blue-900 border-t-4 rounded-t-[20px] border-b border-blue-900 border-b-4 rounded-b-[20px]">
         <div className="grid  mobile:mt-2 tablet:ml-[180px] mobile:ml-12 laptop:ml-96 laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[265px] tablet:w-[440px] laptop:w-[500px] ">
@@ -369,28 +385,25 @@ function Home() {
           </a>
         </div>
       </div>
-      <div
-        className="flex bg-cover h-screen w-full"
-        style={{ backgroundImage: `url(${Bgimg})` }}
-      >
+      <div className="bg-animation flex bg-cover h-screen w-full overflow-hidden">
         <img className="absolute  laptop:w-32 mobile:w-24" src={title} alt="" />
         <h1 className="absolute mobile:ml-32 mobile:mt-5 text-[#ffda00] font-GillCondensedB laptop:text-5xl laptop:ml-[370px] tablet:ml-[220px] mobile:text-lg tablet:text-3xl text-outline-blue">
           Baixe suas fotos aqui!
         </h1>
-        <div className="grid laptop:mt-24 laptop:ml-10 tablet:ml-24 laptop:space-x-3 laptop:p-8 mobile:space-y-2 tablet:space-y-2 mobile:mt-20  mobile:grid-cols-2 mobile:p-2 laptop:grid-cols-3 laptop:grid-rows-3 justify-center items-center mobile:overflow-hidden ">
+        <div className="grid laptop:mt-24 laptop:ml-10 tablet:ml-24 mobile:ml-5 laptop:space-x-3 laptop:p-8 mobile:space-y-2 tablet:space-y-2 mobile:mt-20  mobile:grid-cols-2 mobile:p-2 laptop:grid-cols-3 laptop:grid-rows-3 justify-center items-center mobile:overflow-hidden ">
           <div className="relative bg-[#e30024] laptop:ml-[3px] laptop:mt-[5px] skew-x-12 laptop:p-4 laptop:w-80 mobile:w-[150px] mobile:ml-5 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]">
-            <h1 className="absolute laptop:mt-[-40px] skew-y-6 -skew-x-12 laptop:text-7xl mobile:text-3xl mobile:mt-[-15px] text-[#ffda00] font-black hover:mt-[-50px]">
+            <h1 className="absolute laptop:mt-[-40px] skew-y-6 -skew-x-12 laptop:text-7xl mobile:text-3xl mobile:mt-[-15px] mobile:ml-[-10px] text-[#ffda00] font-black hover:mt-[-50px]">
               19
             </h1>
             <Link
               to="/gallery/19"
               className="text-white font-black hover:text-blue-700 transition duration-300"
             >
-              <h2 className=" -skew-x-12 font-GillCondensedB ">OUTUBRO</h2>
+              <h2 className=" -skew-x-12 font-GillCondensedB">OUTUBRO</h2>
             </Link>
           </div>
           <div className="relative bg-[#e30024] skew-x-12 laptop:p-4 laptop:w-80 mobile:w-[150px] mobile:ml-5 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]">
-            <h1 className="absolute laptop:mt-[-40px] skew-y-6 -skew-x-12 laptop:text-7xl mobile:text-3xl mobile:mt-[-15px] text-[#ffda00] font-black hover:mt-[-50px]">
+            <h1 className="absolute laptop:mt-[-40px] skew-y-6 -skew-x-12 laptop:text-7xl mobile:text-3xl mobile:ml-[-10px] mobile:mt-[-15px] text-[#ffda00] font-black hover:mt-[-50px]">
               20
             </h1>
             <Link
@@ -401,7 +414,7 @@ function Home() {
             </Link>
           </div>
           <div className="relative bg-[#e30024] skew-x-12 laptop:p-4 laptop:w-80 mobile:w-[150px] mobile:ml-5 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]">
-            <h1 className="absolute laptop:mt-[-40px] skew-y-6 -skew-x-12 laptop:text-7xl mobile:text-3xl mobile:mt-[-15px] text-[#ffda00] font-black hover:mt-[-50px]">
+            <h1 className="absolute laptop:mt-[-40px] skew-y-6 -skew-x-12 laptop:text-7xl mobile:text-3xl mobile:ml-[-10px] mobile:mt-[-15px] text-[#ffda00] font-black hover:mt-[-50px]">
               21
             </h1>
             <Link
@@ -412,7 +425,7 @@ function Home() {
             </Link>
           </div>
           <div className="relative bg-[#e30024] skew-x-12 laptop:p-4 laptop:w-80 mobile:w-[150px] mobile:ml-5 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]">
-            <h1 className="absolute laptop:mt-[-40px] skew-y-6 -skew-x-12 laptop:text-7xl mobile:text-3xl mobile:mt-[-15px] text-[#ffda00] font-black hover:mt-[-50px]">
+            <h1 className="absolute laptop:mt-[-40px] skew-y-6 -skew-x-12 laptop:text-7xl mobile:text-3xl mobile:ml-[-10px] mobile:mt-[-15px] text-[#ffda00] font-black hover:mt-[-50px]">
               22
             </h1>
             <Link
@@ -423,7 +436,7 @@ function Home() {
             </Link>
           </div>
           <div className="relative bg-[#e30024] skew-x-12 laptop:p-4 laptop:w-80 mobile:w-[150px] mobile:ml-5 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]">
-            <h1 className="absolute laptop:mt-[-40px] skew-y-6 -skew-x-12 laptop:text-7xl mobile:text-3xl mobile:mt-[-15px] text-[#ffda00] font-black hover:mt-[-50px]">
+            <h1 className="absolute laptop:mt-[-40px] skew-y-6 -skew-x-12 laptop:text-7xl mobile:text-3xl mobile:ml-[-10px] mobile:mt-[-15px] text-[#ffda00] font-black hover:mt-[-50px]">
               23
             </h1>
             <Link
@@ -433,18 +446,19 @@ function Home() {
               <h2 className=" -skew-x-12 font-GillCondensedB">OUTUBRO</h2>
             </Link>
           </div>
-          <div className="relative bg-gray-500 opacity-50 skew-x-12 laptop:p-4 laptop:w-80 mobile:w-[150px] mobile:ml-5 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]">
-            <h1 className="absolute laptop:mt-[-40px] skew-y-6 -skew-x-12 laptop:text-7xl mobile:text-3xl mobile:mt-[-15px] text-[#ffda00] font-black hover:mt-[-50px]">
+          <div className="relative bg-[#e30024] skew-x-12 laptop:p-4 laptop:w-80 mobile:w-[150px] mobile:ml-5 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]">
+            <h1 className="absolute laptop:mt-[-40px] skew-y-6 -skew-x-12 laptop:text-7xl mobile:text-3xl mobile:ml-[-10px] mobile:mt-[-15px] text-[#ffda00] font-black hover:mt-[-50px]">
               24
             </h1>
-            {/* <Link
+            <Link
               to="/gallery/24"
               className="text-white font-black hover:text-blue-700 transition duration-300"
-            > */}
-            <h2 className=" -skew-x-12 font-GillCondensedB">OUTUBRO</h2>
+            >
+              <h2 className=" -skew-x-12 font-GillCondensedB">OUTUBRO</h2>
+            </Link>
           </div>
           <div className="relative bg-gray-500 opacity-50 skew-x-12 laptop:p-4 laptop:w-80 mobile:w-[150px] mobile:ml-5 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]">
-            <h1 className="absolute laptop:mt-[-40px] skew-y-6 -skew-x-12 laptop:text-7xl mobile:text-3xl mobile:mt-[-15px] text-[#ffda00] font-black hover:mt-[-50px]">
+            <h1 className="absolute laptop:mt-[-40px] skew-y-6 -skew-x-12 laptop:text-7xl mobile:text-3xl mobile:ml-[-10px] mobile:mt-[-15px] text-[#ffda00] font-black hover:mt-[-50px]">
               25
             </h1>
             {/* <Link
@@ -454,7 +468,7 @@ function Home() {
             <h2 className=" -skew-x-12 font-GillCondensedB">OUTUBRO</h2>
           </div>
           <div className="relative bg-gray-500 opacity-50 skew-x-12 laptop:p-4 laptop:w-80 mobile:w-[150px] mobile:ml-5 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]">
-            <h1 className="absolute laptop:mt-[-40px] skew-y-6 -skew-x-12 laptop:text-7xl mobile:text-3xl mobile:mt-[-15px] text-[#ffda00] font-black hover:mt-[-50px]">
+            <h1 className="absolute laptop:mt-[-40px] skew-y-6 -skew-x-12 laptop:text-7xl mobile:text-3xl mobile:ml-[-10px] mobile:mt-[-15px] text-[#ffda00] font-black hover:mt-[-50px]">
               26
             </h1>
             {/* <Link
@@ -463,8 +477,8 @@ function Home() {
             > */}
             <h2 className=" -skew-x-12 font-GillCondensedB">OUTUBRO</h2>
           </div>
-          <div className="relative bg-gray-500 opacity-50 skew-x-12 laptop:p-4 laptop:w-80 mobile:w-48 laptop:ml-4 mobile:ml-20 tablet:left-10 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]">
-            <h1 className="absolute laptop:mt-[-40px] skew-y-6 -skew-x-12 laptop:text-7xl mobile:text-4xl mobile:mt-[-15px] text-[#ffda00] font-black hover:mt-[-50px]">
+          <div className="relative bg-gray-500 opacity-50 skew-x-12 laptop:p-4 laptop:w-80 mobile:w-[150px] mobile:ml-5 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]">
+            <h1 className="absolute laptop:mt-[-40px] skew-y-6 -skew-x-12 laptop:text-7xl mobile:text-3xl mobile:ml-[-10px] mobile:mt-[-15px] text-[#ffda00] font-black hover:mt-[-50px]">
               27
             </h1>
             {/* <Link
@@ -495,10 +509,7 @@ function Home() {
           allowfullscreen
         ></iframe>
       </div>
-      <div
-        className="relative bg-cover  h-screen w-full overflow-hidden"
-        style={{ backgroundImage: `url(${Bgimg})` }}
-      >
+      <div className="bg-animation relative bg-cover  h-screen w-full overflow-hidden">
         <div className="flex justify-center items-center">
           <img
             className="mobile:w-48 mobile:mt-5 laptop:w-72 "

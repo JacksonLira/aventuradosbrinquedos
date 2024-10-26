@@ -49,3 +49,71 @@
 .animate-slide-infinite {
   animation: slide 15s linear infinite;
 }
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px); /* Altere o valor para ajustar a altura da flutuação */
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes slide-background {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@media (min-width: 360px) {
+
+  .bg-animation {
+    background-image: url('../src/assets/toy-story-cloud.jpg');
+    background-size: 300% auto;
+    animation: slide-background 65s linear infinite;
+    overflow: hidden;
+  }
+  
+}
+
+@media (min-width: 768px) {
+
+  .bg-animation {
+    background-image: url('../src/assets/toy-story-cloud.jpg');
+    background-size: 240% auto;
+    animation: slide-background 65s linear infinite;
+    overflow: hidden;
+  }
+  
+}
+
+@media (min-width: 1024px) {
+
+  .bg-animation {
+    background-image: url('../src/assets/toy-story-cloud.jpg');
+    background-size: 140% auto;
+    animation: slide-background 65s linear infinite;
+    overflow: hidden;
+  }
+  
+}
+
+@media (min-width: 1280px) {
+
+  .bg-animation {
+    background-image: url('../src/assets/toy-story-cloud.jpg');
+    background-size: 110% auto;
+    animation: slide-background 65s linear infinite;
+  }
+  
+}
