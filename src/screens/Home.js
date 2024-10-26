@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useState } from 'react'
 import Slider from 'react-slick'
 
 import 'slick-carousel/slick/slick.css'
@@ -12,13 +12,11 @@ import Bigreja from '../assets/bigreja.png'
 import Buzzy from '../assets/Buzz_Lightyear.png'
 import ImgIgreja from '../assets/imgigreja.png'
 import Jessy from '../assets/jesspng.png'
-import Nuvem from '../assets/nuvemm.webp'
 import perso from '../assets/personagens.png'
 import Rex from '../assets/Rex.png'
 import Sid from '../assets/Sid-Phillips.png'
 import Slinky from '../assets/Slinky.png'
 import Titletwo from '../assets/titleword.png'
-import Bgimg from '../assets/toy-story-cloud.jpg'
 import Imgfinal from '../assets/Turma_Toy_Story_6.png'
 import Uber from '../assets/uber-logo-11.png'
 import Banner from '../assets/woodbuzzy.png'
@@ -27,7 +25,6 @@ import Contagem from '../components/Contagem'
 import FAQSection from '../components/FAQsection'
 import Modal from '../components/Modal'
 import Reels from '../components/Reels'
-import Video from '../video/nuvem.mp4'
 
 // eslint-disable-next-line import-helpers/order-imports, no-unused-vars
 import { Link } from 'react-router-dom'
@@ -36,16 +33,6 @@ import { Link } from 'react-router-dom'
 import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube } from 'react-icons/fa'
 
 function Home() {
-  const videoRef = useRef(null)
-
-  useEffect(() => {
-    // Garante que o autoplay funcione em dispositivos móveis
-    if (videoRef.current) {
-      videoRef.current.play().catch(() => {
-        console.log('Autoplay foi bloqueado')
-      })
-    }
-  }, [])
   const [showModal, setShowModal] = useState(false)
   const [videoUrl, setVideoUrl] = useState('')
 
@@ -98,19 +85,6 @@ function Home() {
   return (
     <div className="App">
       <div className="bg-animation flex justify-center items-center bg-cover laptop:h-screen tablet:h-[600px] mobile:h-[510px] w-full overflow-hidden">
-        {/* <div className="fixed inset-0 w-full h-full overflow-hidden z-0">
-          <video
-            ref={videoRef}
-            className="absolute inset-0 min-w-full h-[510px] object-cover"
-            autoPlay
-            loop
-            muted
-            playsInline
-          >
-            <source src="/path/to/your-video.mp4" type="video/mp4" />
-            Seu navegador não suporta o vídeo.
-          </video>
-        </div> */}
         <div className="absolute bg-cover bg-blue-800 bg-opacity-50 w-full top-0 overflow-hidden">
           <h1 className=" text-[#ffda00]  font-GillCondensedB laptop:text-3xl tablet:text-lg mobile:text-md text-outline-blue">
             19 A 27 DE OUTUBRO
