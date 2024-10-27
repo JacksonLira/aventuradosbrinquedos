@@ -41,7 +41,7 @@ const CountdownTimer = () => {
 
   return (
     <div className=" -skew-x-12 font-GillCondensedB laptop:text-3xl ">
-      <h1 className="text-[#ffda00]">ÚLTMAS APRESENTAÇÕES!!!!!</h1>
+      <h1 className="text-[#ffda00]">ÚLTIMAS APRESENTAÇÕES!!!!!</h1>
       {!finished ? (
         <p
           className="grid  grid-flow-col border border-full p-4 gap-x-2 items-end 
