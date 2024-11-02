@@ -277,7 +277,7 @@ function Home() {
         </div>
       </div>{' '} */}
 
-      <div className="flex h-screen mobile:h-[590px] w-full bg-animation overflow-hidden">
+      {/* <div className="flex h-screen mobile:h-[590px] w-full bg-animation overflow-hidden">
         <div>
           <div className="grid mobile:mt-5 tablet:ml-[290px] mobile:ml-[135px] laptop:ml-[490px] laptop:mt-10 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[130px] tablet:w-[240px] laptop:w-[250px] laptop:h-12 mobile:h-12">
             <h1 className="-skew-x-12 text-white mobile:text-lg mobile:text-center laptop:text-4xl  tablet:text-3xl   font-GillCondensedB">
@@ -306,7 +306,7 @@ function Home() {
             </span>
           </a>
         </div>
-      </div>
+      </div> */}
       <div className="relative bg-cover mt-[-20px] bg-[#ffda00] h-[750px] tablet:h-[850px] w-full border-t border-blue-900 border-t-4 rounded-t-[20px] border-b border-blue-900 border-b-4 rounded-b-[20px]">
         <div className="grid  mobile:mt-2 tablet:ml-[180px] mobile:ml-12 laptop:ml-96 laptop:mt-5 bg-[#e30024] skew-x-12 mobile:p-3 mobile:w-[265px] tablet:w-[440px] laptop:w-[500px] ">
           <h1 className="-skew-x-12 text-white mobile:text-lg mobile:text-left laptop:text-4xl  tablet:text-3xl   font-GillCondensedB">
@@ -442,25 +442,27 @@ function Home() {
               <h2 className=" -skew-x-12 font-GillCondensedB">OUTUBRO</h2>
             </Link>
           </div>
-          <div className="relative bg-gray-500 opacity-50 skew-x-12 laptop:p-4 laptop:w-80 mobile:w-[150px] mobile:ml-5 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]">
+          <div className="relative bg-[#e30024] skew-x-12 laptop:p-4 laptop:w-80 mobile:w-[150px] mobile:ml-5 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]">
             <h1 className="absolute laptop:mt-[-40px] skew-y-6 -skew-x-12 laptop:text-7xl mobile:text-3xl mobile:ml-[-10px] mobile:mt-[-15px] text-[#ffda00] font-black hover:mt-[-50px]">
               26
             </h1>
-            {/* <Link
+            <Link
               to="/gallery/26"
               className="text-white font-black hover:text-blue-700 transition duration-300"
-            > */}
-            <h2 className=" -skew-x-12 font-GillCondensedB">OUTUBRO</h2>
+            >
+              <h2 className=" -skew-x-12 font-GillCondensedB">OUTUBRO</h2>
+            </Link>
           </div>
-          <div className="relative bg-gray-500 opacity-50 skew-x-12 laptop:p-4 laptop:w-80 mobile:w-[150px] mobile:ml-5 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]">
+          <div className="relative bg-[#e30024] skew-x-12 laptop:p-4 laptop:w-80 mobile:w-[150px] mobile:ml-5 tablet:w-52 drop-shadow-[0_10px_10px_rgba(0,0,0,9)]">
             <h1 className="absolute laptop:mt-[-40px] skew-y-6 -skew-x-12 laptop:text-7xl mobile:text-3xl mobile:ml-[-10px] mobile:mt-[-15px] text-[#ffda00] font-black hover:mt-[-50px]">
               27
             </h1>
-            {/* <Link
+            <Link
               to="/gallery/27"
               className="text-white font-black hover:text-blue-700 transition duration-300"
-            > */}
-            <h2 className=" -skew-x-12 font-GillCondensedB">OUTUBRO</h2>
+            >
+              <h2 className=" -skew-x-12 font-GillCondensedB">OUTUBRO</h2>
+            </Link>
           </div>
         </div>
       </div>
